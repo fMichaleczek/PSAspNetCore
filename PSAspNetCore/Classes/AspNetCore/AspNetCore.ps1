@@ -197,14 +197,14 @@ class PSWebHost : IWebHost {
         
         $this.Initialize()
         
-        Write-Host "PSWebHost > Start Async > Preparing Logging"
+        Write-Verbose "PSWebHost > Start Async > Preparing Logging"
         [HostingEventSource]::Log.HostStart()
         $this.Logger = $this.ApplicationServices.GetRequiredService([Microsoft.Extensions.Logging.ILogger[PSWebHost]])
         
         $HostingLoggerExtensionsType = [StartupLoader].Assembly.GetType('Microsoft.AspNetCore.Hosting.Internal.HostingLoggerExtensions')
         $HostingLoggerExtensionsType::Starting($this.Logger)
         
-        Write-Host "PSWebHost > Start Async > Preparing Hosting App"
+        Write-Verbose "PSWebHost > Start Async > Preparing Hosting App"
         $this.ApplicationLifetime = $this.ApplicationServices.GetRequiredService([IApplicationLifetime]) -as [ApplicationLifetime]
         $this.HostedServiceExecutor = $this.ApplicationServices.GetRequiredService([HostedServiceExecutor])
         $RequiredServiceDiagnostic = $this.ApplicationServices.GetRequiredService([DiagnosticListener])
@@ -216,7 +216,7 @@ class PSWebHost : IWebHost {
             $RequiredServiceContext
         )
         
-        Write-Host "PSWebHost > Start Async > Start Async Server"
+        Write-Verbose "PSWebHost > Start Async > Start Async Server"
         $ServerTask = $this.Server.StartAsync($HostingApplication, $CancellationToken) # .ConfigureAwait($false) > $null
         if ($ServerTask.Exception -ne $null){ 
             throw $ServerTask.Exception 
@@ -226,13 +226,13 @@ class PSWebHost : IWebHost {
             $this.ApplicationLifetime.NotifyStarted()
         }
         
-        Write-Host "PSWebHost > Start Async > Start Async Hosted Service Executor"
+        Write-Verbose "PSWebHost > Start Async > Start Async Hosted Service Executor"
         $ServiceTask = $this.HostedServiceExecutor.StartAsync($CancellationToken) #.GetAwaiter().GetResult()
         if ($ServiceTask.Exception -ne $null){ 
             throw $ServiceTask.Exception 
         }
         
-        Write-Host "PSWebHost > Start Async > Logger Started"
+        Write-Verbose "PSWebHost > Start Async > Logger Started"
         
         # BUG : $this._logger.Started()
         $HostingLoggerExtensionsType::Started($this.Logger)
@@ -243,7 +243,7 @@ class PSWebHost : IWebHost {
             }
         }
         
-        Write-Host "PSWebHost > StartAsync > Hosting Startup Errors"
+        Write-Verbose "PSWebHost > StartAsync > Hosting Startup Errors"
         if ( $null -ne $this.HostingStartupErrors) {
             foreach ($InnerException in $this.HostingStartupErrors.InnerExceptions) {
                 $this.Logger.HostingStartupAssemblyError($InnerException)
@@ -458,7 +458,7 @@ class PSWebHost : IWebHost {
         
             if ( -not $this.Options.SuppressStatusMessage ) {
                 # Write errors to standard out so they can be retrieved when not in development mode.
-                Write-Host "Application startup exception: $($_.Exception).ToString()"
+                Write-Error "Application startup exception: $($_.Exception).ToString()"
             }
             
             [Microsoft.Extensions.Logging.LoggerExtensions]::LogCritical(
@@ -601,7 +601,7 @@ class PSWebHost : IWebHost {
             # BUG : $LoggingBuilder.AddConsole()
             [Microsoft.Extensions.Logging.ConsoleLoggerExtensions]::AddConsole($Logging)
             # BUG : $LoggingBuilder.AddDebug()
-            [ Microsoft.Extensions.Logging.DebugLoggerFactoryExtensions]::AddDebug($Logging)
+            [Microsoft.Extensions.Logging.DebugLoggerFactoryExtensions]::AddDebug($Logging)
         }
         $HostBuilder.ConfigureLogging($ConfigureLogging)
         
@@ -649,7 +649,7 @@ class PSWebHostBuilder : WebHostBuilder {
         $this.SetFieldValue('_config', $Config )
         
         if ( [string]::IsNullOrEmpty($this.GetSetting([WebHostDefaults]::EnvironmentKey))) {
-            $this.UseSetting([WebHostDefaults]::EnvironmentKey,    [Environment]::GetEnvironmentVariable('ASPNET_ENV'))
+            $this.UseSetting([WebHostDefaults]::EnvironmentKey, [Environment]::GetEnvironmentVariable('ASPNET_ENV'))
         }
         
         if ( [string]::IsNullOrEmpty($this.GetSetting([WebHostDefaults]::ServerUrlsKey))) {
@@ -692,7 +692,7 @@ class PSWebHostBuilder : WebHostBuilder {
         
         $this.SetFieldValue('_options', $Options)
         
-        $Options.ApplicationName = 'KitchenAspNet'
+        $Options.ApplicationName = 'PSAspNetCore'
                 
         if ( -not $Options.PreventHostingStartup ) {
         
@@ -798,7 +798,7 @@ class PSWebHostBuilder : WebHostBuilder {
         $DynamicTypes = [AppDomain]::CurrentDomain.GetAssemblies().Where{$_.IsDynamic}.DefinedTypes
         $StartupType = $DynamicTypes.Where{ $_.Name -eq 'Startup' -or [IStartup].IsAssignableFrom($_) } | Select-Object -First 1
         
-        if ( [IStartup].IsAssignableFrom($StartupType )) {
+        if ( [IStartup].IsAssignableFrom($StartupType) ) {
             $Services.AddSingleton([IStartup], $StartupType)
         }
         else {

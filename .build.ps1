@@ -1,4 +1,4 @@
-Install-Module UncommonSense.PowerShell.TypeData, GenericMethods, PSRunspacedDelegate, PSLambda
+Install-Module UncommonSense.PowerShell.TypeData, GenericMethods, PSLambda
 
 $PSGalleryPublishUri = 'https://www.myget.org/F/ottomatt/api/v2/package'
 $PSGallerySourceUri = 'https://www.myget.org/F/ottomatt/api/v2'
