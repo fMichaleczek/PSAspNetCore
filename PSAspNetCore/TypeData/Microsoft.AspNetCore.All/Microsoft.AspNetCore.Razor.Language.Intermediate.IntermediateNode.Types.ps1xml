@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Types>
+  <Type>
+    <Name>Microsoft.AspNetCore.Razor.Language.Intermediate.IntermediateNode</Name>
+    <Members>
+      <ScriptMethod>
+        <Name>IsImported</Name>
+        <Script> switch ($args.Count) {
+				 # IsImported([Microsoft.AspNetCore.Razor.Language.Intermediate.IntermediateNode] $node)
+		 0 { [Microsoft.AspNetCore.Razor.Language.Intermediate.IntermediateNodeExtensions]::IsImported($this) }
+
+		 default { throw "No overload for 'IsImported' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>GetAllDiagnostics</Name>
+        <Script> switch ($args.Count) {
+				 # GetAllDiagnostics([Microsoft.AspNetCore.Razor.Language.Intermediate.IntermediateNode] $node)
+		 0 { [Microsoft.AspNetCore.Razor.Language.Intermediate.IntermediateNodeExtensions]::GetAllDiagnostics($this) }
+
+		 default { throw "No overload for 'GetAllDiagnostics' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>FindDescendantNodes</Name>
+        <Script> switch ($args.Count) {
+				 # FindDescendantNodes([Microsoft.AspNetCore.Razor.Language.Intermediate.IntermediateNode] $node)
+		 0 { [Microsoft.AspNetCore.Razor.Language.Intermediate.IntermediateNodeExtensions]::FindDescendantNodes($this) }
+
+		 default { throw "No overload for 'FindDescendantNodes' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+    </Members>
+  </Type>
+</Types>

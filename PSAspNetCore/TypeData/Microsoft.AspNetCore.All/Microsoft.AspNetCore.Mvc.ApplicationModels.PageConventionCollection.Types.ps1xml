@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Types>
+  <Type>
+    <Name>Microsoft.AspNetCore.Mvc.ApplicationModels.PageConventionCollection</Name>
+    <Members>
+      <ScriptMethod>
+        <Name>ConfigureFilter</Name>
+        <Script> switch ($args.Count) {
+				 # ConfigureFilter([Microsoft.AspNetCore.Mvc.ApplicationModels.PageConventionCollection] $conventions, [System.Func`2[Microsoft.AspNetCore.Mvc.ApplicationModels.PageApplicationModel,Microsoft.AspNetCore.Mvc.Filters.IFilterMetadata]] $factory)
+		 1 { [Microsoft.Extensions.DependencyInjection.PageConventionCollectionExtensions]::ConfigureFilter($this,$args[0]) }
+
+		 default { throw "No overload for 'ConfigureFilter' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>AllowAnonymousToPage</Name>
+        <Script> switch ($args.Count) {
+				 # AllowAnonymousToPage([Microsoft.AspNetCore.Mvc.ApplicationModels.PageConventionCollection] $conventions, [System.String] $pageName)
+		 1 { [Microsoft.Extensions.DependencyInjection.PageConventionCollectionExtensions]::AllowAnonymousToPage($this,$args[0]) }
+
+		 default { throw "No overload for 'AllowAnonymousToPage' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>AllowAnonymousToFolder</Name>
+        <Script> switch ($args.Count) {
+				 # AllowAnonymousToFolder([Microsoft.AspNetCore.Mvc.ApplicationModels.PageConventionCollection] $conventions, [System.String] $folderPath)
+		 1 { [Microsoft.Extensions.DependencyInjection.PageConventionCollectionExtensions]::AllowAnonymousToFolder($this,$args[0]) }
+
+		 default { throw "No overload for 'AllowAnonymousToFolder' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>AuthorizePage</Name>
+        <Script> switch ($args.Count) {
+				 # AuthorizePage([Microsoft.AspNetCore.Mvc.ApplicationModels.PageConventionCollection] $conventions, [System.String] $pageName)
+		 1 { [Microsoft.Extensions.DependencyInjection.PageConventionCollectionExtensions]::AuthorizePage($this,$args[0]) }
+
+				 # AuthorizePage([Microsoft.AspNetCore.Mvc.ApplicationModels.PageConventionCollection] $conventions, [System.String] $pageName, [System.String] $policy)
+		 2 { [Microsoft.Extensions.DependencyInjection.PageConventionCollectionExtensions]::AuthorizePage($this,$args[0],$args[1]) }
+
+		 default { throw "No overload for 'AuthorizePage' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>AuthorizeFolder</Name>
+        <Script> switch ($args.Count) {
+				 # AuthorizeFolder([Microsoft.AspNetCore.Mvc.ApplicationModels.PageConventionCollection] $conventions, [System.String] $folderPath)
+		 1 { [Microsoft.Extensions.DependencyInjection.PageConventionCollectionExtensions]::AuthorizeFolder($this,$args[0]) }
+
+				 # AuthorizeFolder([Microsoft.AspNetCore.Mvc.ApplicationModels.PageConventionCollection] $conventions, [System.String] $folderPath, [System.String] $policy)
+		 2 { [Microsoft.Extensions.DependencyInjection.PageConventionCollectionExtensions]::AuthorizeFolder($this,$args[0],$args[1]) }
+
+		 default { throw "No overload for 'AuthorizeFolder' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>AddPageRoute</Name>
+        <Script> switch ($args.Count) {
+				 # AddPageRoute([Microsoft.AspNetCore.Mvc.ApplicationModels.PageConventionCollection] $conventions, [System.String] $pageName, [System.String] $route)
+		 2 { [Microsoft.Extensions.DependencyInjection.PageConventionCollectionExtensions]::AddPageRoute($this,$args[0],$args[1]) }
+
+		 default { throw "No overload for 'AddPageRoute' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+    </Members>
+  </Type>
+</Types>

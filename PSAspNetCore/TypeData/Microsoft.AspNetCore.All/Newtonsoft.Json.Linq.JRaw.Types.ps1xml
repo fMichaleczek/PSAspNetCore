@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Types>
+  <Type>
+    <Name>Newtonsoft.Json.Linq.JRaw</Name>
+    <Members>
+      <ScriptMethod>
+        <Name>Values</Name>
+        <Script> switch ($args.Count) {
+				 # Values([System.Collections.Generic.IEnumerable`1[Newtonsoft.Json.Linq.JToken]] $source)
+		 0 { [Newtonsoft.Json.Linq.Extensions]::Values($this) }
+
+				 # Values([System.Collections.Generic.IEnumerable`1[Newtonsoft.Json.Linq.JToken]] $source, [System.Object] $key)
+		 1 { [Newtonsoft.Json.Linq.Extensions]::Values($this,$args[0]) }
+
+		 default { throw "No overload for 'Values' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>Value</Name>
+        <Script> switch ($args.Count) {
+				 # Value([System.Collections.Generic.IEnumerable`1[Newtonsoft.Json.Linq.JToken]] $value)
+		 0 { [Newtonsoft.Json.Linq.Extensions]::Value($this) }
+
+		 default { throw "No overload for 'Value' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>AsJEnumerable</Name>
+        <Script> switch ($args.Count) {
+				 # AsJEnumerable([System.Collections.Generic.IEnumerable`1[Newtonsoft.Json.Linq.JToken]] $source)
+		 0 { [Newtonsoft.Json.Linq.Extensions]::AsJEnumerable($this) }
+
+		 default { throw "No overload for 'AsJEnumerable' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+    </Members>
+  </Type>
+</Types>

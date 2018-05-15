@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Types>
+  <Type>
+    <Name>Microsoft.Extensions.Caching.Memory.MemoryCacheEntryOptions</Name>
+    <Members>
+      <ScriptMethod>
+        <Name>SetPriority</Name>
+        <Script> switch ($args.Count) {
+				 # SetPriority([Microsoft.Extensions.Caching.Memory.MemoryCacheEntryOptions] $options, [Microsoft.Extensions.Caching.Memory.CacheItemPriority] $priority)
+		 1 { [Microsoft.Extensions.Caching.Memory.MemoryCacheEntryExtensions]::SetPriority($this,$args[0]) }
+
+		 default { throw "No overload for 'SetPriority' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>SetSize</Name>
+        <Script> switch ($args.Count) {
+				 # SetSize([Microsoft.Extensions.Caching.Memory.MemoryCacheEntryOptions] $options, [System.Int64] $size)
+		 1 { [Microsoft.Extensions.Caching.Memory.MemoryCacheEntryExtensions]::SetSize($this,$args[0]) }
+
+		 default { throw "No overload for 'SetSize' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>AddExpirationToken</Name>
+        <Script> switch ($args.Count) {
+				 # AddExpirationToken([Microsoft.Extensions.Caching.Memory.MemoryCacheEntryOptions] $options, [Microsoft.Extensions.Primitives.IChangeToken] $expirationToken)
+		 1 { [Microsoft.Extensions.Caching.Memory.MemoryCacheEntryExtensions]::AddExpirationToken($this,$args[0]) }
+
+		 default { throw "No overload for 'AddExpirationToken' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>SetAbsoluteExpiration</Name>
+        <Script> switch ($args.Count) {
+				 # SetAbsoluteExpiration([Microsoft.Extensions.Caching.Memory.MemoryCacheEntryOptions] $options, [System.TimeSpan] $relative)
+		 1 { [Microsoft.Extensions.Caching.Memory.MemoryCacheEntryExtensions]::SetAbsoluteExpiration($this,$args[0]) }
+
+		 default { throw "No overload for 'SetAbsoluteExpiration' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>SetSlidingExpiration</Name>
+        <Script> switch ($args.Count) {
+				 # SetSlidingExpiration([Microsoft.Extensions.Caching.Memory.MemoryCacheEntryOptions] $options, [System.TimeSpan] $offset)
+		 1 { [Microsoft.Extensions.Caching.Memory.MemoryCacheEntryExtensions]::SetSlidingExpiration($this,$args[0]) }
+
+		 default { throw "No overload for 'SetSlidingExpiration' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>RegisterPostEvictionCallback</Name>
+        <Script> switch ($args.Count) {
+				 # RegisterPostEvictionCallback([Microsoft.Extensions.Caching.Memory.MemoryCacheEntryOptions] $options, [Microsoft.Extensions.Caching.Memory.PostEvictionDelegate] $callback)
+		 1 { [Microsoft.Extensions.Caching.Memory.MemoryCacheEntryExtensions]::RegisterPostEvictionCallback($this,$args[0]) }
+
+				 # RegisterPostEvictionCallback([Microsoft.Extensions.Caching.Memory.MemoryCacheEntryOptions] $options, [Microsoft.Extensions.Caching.Memory.PostEvictionDelegate] $callback, [System.Object] $state)
+		 2 { [Microsoft.Extensions.Caching.Memory.MemoryCacheEntryExtensions]::RegisterPostEvictionCallback($this,$args[0],$args[1]) }
+
+		 default { throw "No overload for 'RegisterPostEvictionCallback' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+    </Members>
+  </Type>
+</Types>

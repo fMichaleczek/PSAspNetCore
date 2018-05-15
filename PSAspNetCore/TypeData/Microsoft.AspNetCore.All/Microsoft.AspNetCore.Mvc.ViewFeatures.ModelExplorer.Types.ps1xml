@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Types>
+  <Type>
+    <Name>Microsoft.AspNetCore.Mvc.ViewFeatures.ModelExplorer</Name>
+    <Members>
+      <ScriptMethod>
+        <Name>GetSimpleDisplayText</Name>
+        <Script> switch ($args.Count) {
+				 # GetSimpleDisplayText([Microsoft.AspNetCore.Mvc.ViewFeatures.ModelExplorer] $modelExplorer)
+		 0 { [Microsoft.AspNetCore.Mvc.ViewFeatures.ModelExplorerExtensions]::GetSimpleDisplayText($this) }
+
+		 default { throw "No overload for 'GetSimpleDisplayText' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+    </Members>
+  </Type>
+</Types>

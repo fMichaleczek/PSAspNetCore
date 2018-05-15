@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Types>
+  <Type>
+    <Name>Microsoft.AspNetCore.Razor.TagHelpers.TagHelperOutput</Name>
+    <Members>
+      <ScriptMethod>
+        <Name>CopyHtmlAttribute</Name>
+        <Script> switch ($args.Count) {
+				 # CopyHtmlAttribute([Microsoft.AspNetCore.Razor.TagHelpers.TagHelperOutput] $tagHelperOutput, [System.String] $attributeName, [Microsoft.AspNetCore.Razor.TagHelpers.TagHelperContext] $context)
+		 2 { [Microsoft.AspNetCore.Mvc.TagHelpers.TagHelperOutputExtensions]::CopyHtmlAttribute($this,$args[0],$args[1]) }
+
+		 default { throw "No overload for 'CopyHtmlAttribute' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>MergeAttributes</Name>
+        <Script> switch ($args.Count) {
+				 # MergeAttributes([Microsoft.AspNetCore.Razor.TagHelpers.TagHelperOutput] $tagHelperOutput, [Microsoft.AspNetCore.Mvc.Rendering.TagBuilder] $tagBuilder)
+		 1 { [Microsoft.AspNetCore.Mvc.TagHelpers.TagHelperOutputExtensions]::MergeAttributes($this,$args[0]) }
+
+		 default { throw "No overload for 'MergeAttributes' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>RemoveRange</Name>
+        <Script> switch ($args.Count) {
+				 # RemoveRange([Microsoft.AspNetCore.Razor.TagHelpers.TagHelperOutput] $tagHelperOutput, [System.Collections.Generic.IEnumerable`1[Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute]] $attributes)
+		 1 { [Microsoft.AspNetCore.Mvc.TagHelpers.TagHelperOutputExtensions]::RemoveRange($this,$args[0]) }
+
+		 default { throw "No overload for 'RemoveRange' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+    </Members>
+  </Type>
+</Types>

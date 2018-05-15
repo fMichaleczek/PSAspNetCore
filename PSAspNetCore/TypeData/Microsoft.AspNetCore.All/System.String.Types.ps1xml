@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Types>
+  <Type>
+    <Name>System.String</Name>
+    <Members>
+      <ScriptMethod>
+        <Name>AsSpan</Name>
+        <Script> switch ($args.Count) {
+				 # AsSpan([System.String] $text)
+		 0 { [Microsoft.AspNetCore.Server.Kestrel.Internal.System.SpanExtensions]::AsSpan($this) }
+
+				 # AsSpan([System.String] $text, [System.Int32] $start)
+		 1 { [System.MemoryExtensions]::AsSpan($this,$args[0]) }
+
+				 # AsSpan([System.String] $text, [System.Int32] $start, [System.Int32] $length)
+		 2 { [System.MemoryExtensions]::AsSpan($this,$args[0],$args[1]) }
+
+		 default { throw "No overload for 'AsSpan' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>AsMemory</Name>
+        <Script> switch ($args.Count) {
+				 # AsMemory([System.String] $text)
+		 0 { [System.MemoryExtensions]::AsMemory($this) }
+
+				 # AsMemory([System.String] $text, [System.Int32] $start)
+		 1 { [System.MemoryExtensions]::AsMemory($this,$args[0]) }
+
+				 # AsMemory([System.String] $text, [System.Int32] $start, [System.Int32] $length)
+		 2 { [System.MemoryExtensions]::AsMemory($this,$args[0],$args[1]) }
+
+		 default { throw "No overload for 'AsMemory' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>IsNormalized</Name>
+        <Script> switch ($args.Count) {
+				 # IsNormalized([System.String] $value)
+		 0 { [System.StringNormalizationExtensions]::IsNormalized($this) }
+
+				 # IsNormalized([System.String] $value, [System.Text.NormalizationForm] $normalizationForm)
+		 1 { [System.StringNormalizationExtensions]::IsNormalized($this,$args[0]) }
+
+		 default { throw "No overload for 'IsNormalized' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>Normalize</Name>
+        <Script> switch ($args.Count) {
+				 # Normalize([System.String] $value)
+		 0 { [System.StringNormalizationExtensions]::Normalize($this) }
+
+				 # Normalize([System.String] $value, [System.Text.NormalizationForm] $normalizationForm)
+		 1 { [System.StringNormalizationExtensions]::Normalize($this,$args[0]) }
+
+		 default { throw "No overload for 'Normalize' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+    </Members>
+  </Type>
+</Types>

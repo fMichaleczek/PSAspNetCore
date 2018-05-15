@@ -1,0 +1,422 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Types>
+  <Type>
+    <Name>System.Diagnostics.DiagnosticSource</Name>
+    <Members>
+      <ScriptMethod>
+        <Name>BeforeAction</Name>
+        <Script> switch ($args.Count) {
+				 # BeforeAction([System.Diagnostics.DiagnosticSource] $diagnosticSource, [Microsoft.AspNetCore.Mvc.Abstractions.ActionDescriptor] $actionDescriptor, [Microsoft.AspNetCore.Http.HttpContext] $httpContext, [Microsoft.AspNetCore.Routing.RouteData] $routeData)
+		 3 { [Microsoft.AspNetCore.Mvc.Internal.MvcCoreDiagnosticSourceExtensions]::BeforeAction($this,$args[0],$args[1],$args[2]) }
+
+		 default { throw "No overload for 'BeforeAction' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>AfterAction</Name>
+        <Script> switch ($args.Count) {
+				 # AfterAction([System.Diagnostics.DiagnosticSource] $diagnosticSource, [Microsoft.AspNetCore.Mvc.Abstractions.ActionDescriptor] $actionDescriptor, [Microsoft.AspNetCore.Http.HttpContext] $httpContext, [Microsoft.AspNetCore.Routing.RouteData] $routeData)
+		 3 { [Microsoft.AspNetCore.Mvc.Internal.MvcCoreDiagnosticSourceExtensions]::AfterAction($this,$args[0],$args[1],$args[2]) }
+
+		 default { throw "No overload for 'AfterAction' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>BeforeOnAuthorizationAsync</Name>
+        <Script> switch ($args.Count) {
+				 # BeforeOnAuthorizationAsync([System.Diagnostics.DiagnosticSource] $diagnosticSource, [Microsoft.AspNetCore.Mvc.Filters.AuthorizationFilterContext] $authorizationContext, [Microsoft.AspNetCore.Mvc.Filters.IAsyncAuthorizationFilter] $filter)
+		 2 { [Microsoft.AspNetCore.Mvc.Internal.MvcCoreDiagnosticSourceExtensions]::BeforeOnAuthorizationAsync($this,$args[0],$args[1]) }
+
+		 default { throw "No overload for 'BeforeOnAuthorizationAsync' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>AfterOnAuthorizationAsync</Name>
+        <Script> switch ($args.Count) {
+				 # AfterOnAuthorizationAsync([System.Diagnostics.DiagnosticSource] $diagnosticSource, [Microsoft.AspNetCore.Mvc.Filters.AuthorizationFilterContext] $authorizationContext, [Microsoft.AspNetCore.Mvc.Filters.IAsyncAuthorizationFilter] $filter)
+		 2 { [Microsoft.AspNetCore.Mvc.Internal.MvcCoreDiagnosticSourceExtensions]::AfterOnAuthorizationAsync($this,$args[0],$args[1]) }
+
+		 default { throw "No overload for 'AfterOnAuthorizationAsync' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>BeforeOnAuthorization</Name>
+        <Script> switch ($args.Count) {
+				 # BeforeOnAuthorization([System.Diagnostics.DiagnosticSource] $diagnosticSource, [Microsoft.AspNetCore.Mvc.Filters.AuthorizationFilterContext] $authorizationContext, [Microsoft.AspNetCore.Mvc.Filters.IAuthorizationFilter] $filter)
+		 2 { [Microsoft.AspNetCore.Mvc.Internal.MvcCoreDiagnosticSourceExtensions]::BeforeOnAuthorization($this,$args[0],$args[1]) }
+
+		 default { throw "No overload for 'BeforeOnAuthorization' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>AfterOnAuthorization</Name>
+        <Script> switch ($args.Count) {
+				 # AfterOnAuthorization([System.Diagnostics.DiagnosticSource] $diagnosticSource, [Microsoft.AspNetCore.Mvc.Filters.AuthorizationFilterContext] $authorizationContext, [Microsoft.AspNetCore.Mvc.Filters.IAuthorizationFilter] $filter)
+		 2 { [Microsoft.AspNetCore.Mvc.Internal.MvcCoreDiagnosticSourceExtensions]::AfterOnAuthorization($this,$args[0],$args[1]) }
+
+		 default { throw "No overload for 'AfterOnAuthorization' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>BeforeOnResourceExecution</Name>
+        <Script> switch ($args.Count) {
+				 # BeforeOnResourceExecution([System.Diagnostics.DiagnosticSource] $diagnosticSource, [Microsoft.AspNetCore.Mvc.Filters.ResourceExecutingContext] $resourceExecutingContext, [Microsoft.AspNetCore.Mvc.Filters.IAsyncResourceFilter] $filter)
+		 2 { [Microsoft.AspNetCore.Mvc.Internal.MvcCoreDiagnosticSourceExtensions]::BeforeOnResourceExecution($this,$args[0],$args[1]) }
+
+		 default { throw "No overload for 'BeforeOnResourceExecution' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>AfterOnResourceExecution</Name>
+        <Script> switch ($args.Count) {
+				 # AfterOnResourceExecution([System.Diagnostics.DiagnosticSource] $diagnosticSource, [Microsoft.AspNetCore.Mvc.Filters.ResourceExecutedContext] $resourceExecutedContext, [Microsoft.AspNetCore.Mvc.Filters.IAsyncResourceFilter] $filter)
+		 2 { [Microsoft.AspNetCore.Mvc.Internal.MvcCoreDiagnosticSourceExtensions]::AfterOnResourceExecution($this,$args[0],$args[1]) }
+
+		 default { throw "No overload for 'AfterOnResourceExecution' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>BeforeOnResourceExecuting</Name>
+        <Script> switch ($args.Count) {
+				 # BeforeOnResourceExecuting([System.Diagnostics.DiagnosticSource] $diagnosticSource, [Microsoft.AspNetCore.Mvc.Filters.ResourceExecutingContext] $resourceExecutingContext, [Microsoft.AspNetCore.Mvc.Filters.IResourceFilter] $filter)
+		 2 { [Microsoft.AspNetCore.Mvc.Internal.MvcCoreDiagnosticSourceExtensions]::BeforeOnResourceExecuting($this,$args[0],$args[1]) }
+
+		 default { throw "No overload for 'BeforeOnResourceExecuting' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>AfterOnResourceExecuting</Name>
+        <Script> switch ($args.Count) {
+				 # AfterOnResourceExecuting([System.Diagnostics.DiagnosticSource] $diagnosticSource, [Microsoft.AspNetCore.Mvc.Filters.ResourceExecutingContext] $resourceExecutingContext, [Microsoft.AspNetCore.Mvc.Filters.IResourceFilter] $filter)
+		 2 { [Microsoft.AspNetCore.Mvc.Internal.MvcCoreDiagnosticSourceExtensions]::AfterOnResourceExecuting($this,$args[0],$args[1]) }
+
+		 default { throw "No overload for 'AfterOnResourceExecuting' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>BeforeOnResourceExecuted</Name>
+        <Script> switch ($args.Count) {
+				 # BeforeOnResourceExecuted([System.Diagnostics.DiagnosticSource] $diagnosticSource, [Microsoft.AspNetCore.Mvc.Filters.ResourceExecutedContext] $resourceExecutedContext, [Microsoft.AspNetCore.Mvc.Filters.IResourceFilter] $filter)
+		 2 { [Microsoft.AspNetCore.Mvc.Internal.MvcCoreDiagnosticSourceExtensions]::BeforeOnResourceExecuted($this,$args[0],$args[1]) }
+
+		 default { throw "No overload for 'BeforeOnResourceExecuted' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>AfterOnResourceExecuted</Name>
+        <Script> switch ($args.Count) {
+				 # AfterOnResourceExecuted([System.Diagnostics.DiagnosticSource] $diagnosticSource, [Microsoft.AspNetCore.Mvc.Filters.ResourceExecutedContext] $resourceExecutedContext, [Microsoft.AspNetCore.Mvc.Filters.IResourceFilter] $filter)
+		 2 { [Microsoft.AspNetCore.Mvc.Internal.MvcCoreDiagnosticSourceExtensions]::AfterOnResourceExecuted($this,$args[0],$args[1]) }
+
+		 default { throw "No overload for 'AfterOnResourceExecuted' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>BeforeOnExceptionAsync</Name>
+        <Script> switch ($args.Count) {
+				 # BeforeOnExceptionAsync([System.Diagnostics.DiagnosticSource] $diagnosticSource, [Microsoft.AspNetCore.Mvc.Filters.ExceptionContext] $exceptionContext, [Microsoft.AspNetCore.Mvc.Filters.IAsyncExceptionFilter] $filter)
+		 2 { [Microsoft.AspNetCore.Mvc.Internal.MvcCoreDiagnosticSourceExtensions]::BeforeOnExceptionAsync($this,$args[0],$args[1]) }
+
+		 default { throw "No overload for 'BeforeOnExceptionAsync' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>AfterOnExceptionAsync</Name>
+        <Script> switch ($args.Count) {
+				 # AfterOnExceptionAsync([System.Diagnostics.DiagnosticSource] $diagnosticSource, [Microsoft.AspNetCore.Mvc.Filters.ExceptionContext] $exceptionContext, [Microsoft.AspNetCore.Mvc.Filters.IAsyncExceptionFilter] $filter)
+		 2 { [Microsoft.AspNetCore.Mvc.Internal.MvcCoreDiagnosticSourceExtensions]::AfterOnExceptionAsync($this,$args[0],$args[1]) }
+
+		 default { throw "No overload for 'AfterOnExceptionAsync' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>BeforeOnException</Name>
+        <Script> switch ($args.Count) {
+				 # BeforeOnException([System.Diagnostics.DiagnosticSource] $diagnosticSource, [Microsoft.AspNetCore.Mvc.Filters.ExceptionContext] $exceptionContext, [Microsoft.AspNetCore.Mvc.Filters.IExceptionFilter] $filter)
+		 2 { [Microsoft.AspNetCore.Mvc.Internal.MvcCoreDiagnosticSourceExtensions]::BeforeOnException($this,$args[0],$args[1]) }
+
+		 default { throw "No overload for 'BeforeOnException' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>AfterOnException</Name>
+        <Script> switch ($args.Count) {
+				 # AfterOnException([System.Diagnostics.DiagnosticSource] $diagnosticSource, [Microsoft.AspNetCore.Mvc.Filters.ExceptionContext] $exceptionContext, [Microsoft.AspNetCore.Mvc.Filters.IExceptionFilter] $filter)
+		 2 { [Microsoft.AspNetCore.Mvc.Internal.MvcCoreDiagnosticSourceExtensions]::AfterOnException($this,$args[0],$args[1]) }
+
+		 default { throw "No overload for 'AfterOnException' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>BeforeOnActionExecution</Name>
+        <Script> switch ($args.Count) {
+				 # BeforeOnActionExecution([System.Diagnostics.DiagnosticSource] $diagnosticSource, [Microsoft.AspNetCore.Mvc.Filters.ActionExecutingContext] $actionExecutingContext, [Microsoft.AspNetCore.Mvc.Filters.IAsyncActionFilter] $filter)
+		 2 { [Microsoft.AspNetCore.Mvc.Internal.MvcCoreDiagnosticSourceExtensions]::BeforeOnActionExecution($this,$args[0],$args[1]) }
+
+		 default { throw "No overload for 'BeforeOnActionExecution' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>AfterOnActionExecution</Name>
+        <Script> switch ($args.Count) {
+				 # AfterOnActionExecution([System.Diagnostics.DiagnosticSource] $diagnosticSource, [Microsoft.AspNetCore.Mvc.Filters.ActionExecutedContext] $actionExecutedContext, [Microsoft.AspNetCore.Mvc.Filters.IAsyncActionFilter] $filter)
+		 2 { [Microsoft.AspNetCore.Mvc.Internal.MvcCoreDiagnosticSourceExtensions]::AfterOnActionExecution($this,$args[0],$args[1]) }
+
+		 default { throw "No overload for 'AfterOnActionExecution' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>BeforeOnActionExecuting</Name>
+        <Script> switch ($args.Count) {
+				 # BeforeOnActionExecuting([System.Diagnostics.DiagnosticSource] $diagnosticSource, [Microsoft.AspNetCore.Mvc.Filters.ActionExecutingContext] $actionExecutingContext, [Microsoft.AspNetCore.Mvc.Filters.IActionFilter] $filter)
+		 2 { [Microsoft.AspNetCore.Mvc.Internal.MvcCoreDiagnosticSourceExtensions]::BeforeOnActionExecuting($this,$args[0],$args[1]) }
+
+		 default { throw "No overload for 'BeforeOnActionExecuting' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>AfterOnActionExecuting</Name>
+        <Script> switch ($args.Count) {
+				 # AfterOnActionExecuting([System.Diagnostics.DiagnosticSource] $diagnosticSource, [Microsoft.AspNetCore.Mvc.Filters.ActionExecutingContext] $actionExecutingContext, [Microsoft.AspNetCore.Mvc.Filters.IActionFilter] $filter)
+		 2 { [Microsoft.AspNetCore.Mvc.Internal.MvcCoreDiagnosticSourceExtensions]::AfterOnActionExecuting($this,$args[0],$args[1]) }
+
+		 default { throw "No overload for 'AfterOnActionExecuting' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>BeforeOnActionExecuted</Name>
+        <Script> switch ($args.Count) {
+				 # BeforeOnActionExecuted([System.Diagnostics.DiagnosticSource] $diagnosticSource, [Microsoft.AspNetCore.Mvc.Filters.ActionExecutedContext] $actionExecutedContext, [Microsoft.AspNetCore.Mvc.Filters.IActionFilter] $filter)
+		 2 { [Microsoft.AspNetCore.Mvc.Internal.MvcCoreDiagnosticSourceExtensions]::BeforeOnActionExecuted($this,$args[0],$args[1]) }
+
+		 default { throw "No overload for 'BeforeOnActionExecuted' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>AfterOnActionExecuted</Name>
+        <Script> switch ($args.Count) {
+				 # AfterOnActionExecuted([System.Diagnostics.DiagnosticSource] $diagnosticSource, [Microsoft.AspNetCore.Mvc.Filters.ActionExecutedContext] $actionExecutedContext, [Microsoft.AspNetCore.Mvc.Filters.IActionFilter] $filter)
+		 2 { [Microsoft.AspNetCore.Mvc.Internal.MvcCoreDiagnosticSourceExtensions]::AfterOnActionExecuted($this,$args[0],$args[1]) }
+
+		 default { throw "No overload for 'AfterOnActionExecuted' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>BeforeActionMethod</Name>
+        <Script> switch ($args.Count) {
+				 # BeforeActionMethod([System.Diagnostics.DiagnosticSource] $diagnosticSource, [Microsoft.AspNetCore.Mvc.ActionContext] $actionContext, [System.Collections.Generic.IDictionary`2[System.String,System.Object]] $actionArguments, [System.Object] $controller)
+		 3 { [Microsoft.AspNetCore.Mvc.Internal.MvcCoreDiagnosticSourceExtensions]::BeforeActionMethod($this,$args[0],$args[1],$args[2]) }
+
+		 default { throw "No overload for 'BeforeActionMethod' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>AfterActionMethod</Name>
+        <Script> switch ($args.Count) {
+				 # AfterActionMethod([System.Diagnostics.DiagnosticSource] $diagnosticSource, [Microsoft.AspNetCore.Mvc.ActionContext] $actionContext, [System.Collections.Generic.IDictionary`2[System.String,System.Object]] $actionArguments, [System.Object] $controller, [Microsoft.AspNetCore.Mvc.IActionResult] $result)
+		 4 { [Microsoft.AspNetCore.Mvc.Internal.MvcCoreDiagnosticSourceExtensions]::AfterActionMethod($this,$args[0],$args[1],$args[2],$args[3]) }
+
+		 default { throw "No overload for 'AfterActionMethod' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>BeforeOnResultExecution</Name>
+        <Script> switch ($args.Count) {
+				 # BeforeOnResultExecution([System.Diagnostics.DiagnosticSource] $diagnosticSource, [Microsoft.AspNetCore.Mvc.Filters.ResultExecutingContext] $resultExecutingContext, [Microsoft.AspNetCore.Mvc.Filters.IAsyncResultFilter] $filter)
+		 2 { [Microsoft.AspNetCore.Mvc.Internal.MvcCoreDiagnosticSourceExtensions]::BeforeOnResultExecution($this,$args[0],$args[1]) }
+
+		 default { throw "No overload for 'BeforeOnResultExecution' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>AfterOnResultExecution</Name>
+        <Script> switch ($args.Count) {
+				 # AfterOnResultExecution([System.Diagnostics.DiagnosticSource] $diagnosticSource, [Microsoft.AspNetCore.Mvc.Filters.ResultExecutedContext] $resultExecutedContext, [Microsoft.AspNetCore.Mvc.Filters.IAsyncResultFilter] $filter)
+		 2 { [Microsoft.AspNetCore.Mvc.Internal.MvcCoreDiagnosticSourceExtensions]::AfterOnResultExecution($this,$args[0],$args[1]) }
+
+		 default { throw "No overload for 'AfterOnResultExecution' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>BeforeOnResultExecuting</Name>
+        <Script> switch ($args.Count) {
+				 # BeforeOnResultExecuting([System.Diagnostics.DiagnosticSource] $diagnosticSource, [Microsoft.AspNetCore.Mvc.Filters.ResultExecutingContext] $resultExecutingContext, [Microsoft.AspNetCore.Mvc.Filters.IResultFilter] $filter)
+		 2 { [Microsoft.AspNetCore.Mvc.Internal.MvcCoreDiagnosticSourceExtensions]::BeforeOnResultExecuting($this,$args[0],$args[1]) }
+
+		 default { throw "No overload for 'BeforeOnResultExecuting' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>AfterOnResultExecuting</Name>
+        <Script> switch ($args.Count) {
+				 # AfterOnResultExecuting([System.Diagnostics.DiagnosticSource] $diagnosticSource, [Microsoft.AspNetCore.Mvc.Filters.ResultExecutingContext] $resultExecutingContext, [Microsoft.AspNetCore.Mvc.Filters.IResultFilter] $filter)
+		 2 { [Microsoft.AspNetCore.Mvc.Internal.MvcCoreDiagnosticSourceExtensions]::AfterOnResultExecuting($this,$args[0],$args[1]) }
+
+		 default { throw "No overload for 'AfterOnResultExecuting' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>BeforeOnResultExecuted</Name>
+        <Script> switch ($args.Count) {
+				 # BeforeOnResultExecuted([System.Diagnostics.DiagnosticSource] $diagnosticSource, [Microsoft.AspNetCore.Mvc.Filters.ResultExecutedContext] $resultExecutedContext, [Microsoft.AspNetCore.Mvc.Filters.IResultFilter] $filter)
+		 2 { [Microsoft.AspNetCore.Mvc.Internal.MvcCoreDiagnosticSourceExtensions]::BeforeOnResultExecuted($this,$args[0],$args[1]) }
+
+		 default { throw "No overload for 'BeforeOnResultExecuted' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>AfterOnResultExecuted</Name>
+        <Script> switch ($args.Count) {
+				 # AfterOnResultExecuted([System.Diagnostics.DiagnosticSource] $diagnosticSource, [Microsoft.AspNetCore.Mvc.Filters.ResultExecutedContext] $resultExecutedContext, [Microsoft.AspNetCore.Mvc.Filters.IResultFilter] $filter)
+		 2 { [Microsoft.AspNetCore.Mvc.Internal.MvcCoreDiagnosticSourceExtensions]::AfterOnResultExecuted($this,$args[0],$args[1]) }
+
+		 default { throw "No overload for 'AfterOnResultExecuted' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>BeforeActionResult</Name>
+        <Script> switch ($args.Count) {
+				 # BeforeActionResult([System.Diagnostics.DiagnosticSource] $diagnosticSource, [Microsoft.AspNetCore.Mvc.ActionContext] $actionContext, [Microsoft.AspNetCore.Mvc.IActionResult] $result)
+		 2 { [Microsoft.AspNetCore.Mvc.Internal.MvcCoreDiagnosticSourceExtensions]::BeforeActionResult($this,$args[0],$args[1]) }
+
+		 default { throw "No overload for 'BeforeActionResult' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>AfterActionResult</Name>
+        <Script> switch ($args.Count) {
+				 # AfterActionResult([System.Diagnostics.DiagnosticSource] $diagnosticSource, [Microsoft.AspNetCore.Mvc.ActionContext] $actionContext, [Microsoft.AspNetCore.Mvc.IActionResult] $result)
+		 2 { [Microsoft.AspNetCore.Mvc.Internal.MvcCoreDiagnosticSourceExtensions]::AfterActionResult($this,$args[0],$args[1]) }
+
+		 default { throw "No overload for 'AfterActionResult' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>BeforeHandlerMethod</Name>
+        <Script> switch ($args.Count) {
+				 # BeforeHandlerMethod([System.Diagnostics.DiagnosticSource] $diagnosticSource, [Microsoft.AspNetCore.Mvc.ActionContext] $actionContext, [Microsoft.AspNetCore.Mvc.RazorPages.Infrastructure.HandlerMethodDescriptor] $handlerMethodDescriptor, [System.Collections.Generic.IDictionary`2[System.String,System.Object]] $arguments, [System.Object] $instance)
+		 4 { [Microsoft.AspNetCore.Mvc.Internal.MvcRazorPagesDiagnosticSourceExtensions]::BeforeHandlerMethod($this,$args[0],$args[1],$args[2],$args[3]) }
+
+		 default { throw "No overload for 'BeforeHandlerMethod' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>AfterHandlerMethod</Name>
+        <Script> switch ($args.Count) {
+				 # AfterHandlerMethod([System.Diagnostics.DiagnosticSource] $diagnosticSource, [Microsoft.AspNetCore.Mvc.ActionContext] $actionContext, [Microsoft.AspNetCore.Mvc.RazorPages.Infrastructure.HandlerMethodDescriptor] $handlerMethodDescriptor, [System.Collections.Generic.IDictionary`2[System.String,System.Object]] $arguments, [System.Object] $instance, [Microsoft.AspNetCore.Mvc.IActionResult] $result)
+		 5 { [Microsoft.AspNetCore.Mvc.Internal.MvcRazorPagesDiagnosticSourceExtensions]::AfterHandlerMethod($this,$args[0],$args[1],$args[2],$args[3],$args[4]) }
+
+		 default { throw "No overload for 'AfterHandlerMethod' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>BeforeOnPageHandlerExecution</Name>
+        <Script> switch ($args.Count) {
+				 # BeforeOnPageHandlerExecution([System.Diagnostics.DiagnosticSource] $diagnosticSource, [Microsoft.AspNetCore.Mvc.Filters.PageHandlerExecutingContext] $handlerExecutionContext, [Microsoft.AspNetCore.Mvc.Filters.IAsyncPageFilter] $filter)
+		 2 { [Microsoft.AspNetCore.Mvc.Internal.MvcRazorPagesDiagnosticSourceExtensions]::BeforeOnPageHandlerExecution($this,$args[0],$args[1]) }
+
+		 default { throw "No overload for 'BeforeOnPageHandlerExecution' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>AfterOnPageHandlerExecution</Name>
+        <Script> switch ($args.Count) {
+				 # AfterOnPageHandlerExecution([System.Diagnostics.DiagnosticSource] $diagnosticSource, [Microsoft.AspNetCore.Mvc.Filters.PageHandlerExecutedContext] $handlerExecutedContext, [Microsoft.AspNetCore.Mvc.Filters.IAsyncPageFilter] $filter)
+		 2 { [Microsoft.AspNetCore.Mvc.Internal.MvcRazorPagesDiagnosticSourceExtensions]::AfterOnPageHandlerExecution($this,$args[0],$args[1]) }
+
+		 default { throw "No overload for 'AfterOnPageHandlerExecution' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>BeforeOnPageHandlerExecuting</Name>
+        <Script> switch ($args.Count) {
+				 # BeforeOnPageHandlerExecuting([System.Diagnostics.DiagnosticSource] $diagnosticSource, [Microsoft.AspNetCore.Mvc.Filters.PageHandlerExecutingContext] $handlerExecutingContext, [Microsoft.AspNetCore.Mvc.Filters.IPageFilter] $filter)
+		 2 { [Microsoft.AspNetCore.Mvc.Internal.MvcRazorPagesDiagnosticSourceExtensions]::BeforeOnPageHandlerExecuting($this,$args[0],$args[1]) }
+
+		 default { throw "No overload for 'BeforeOnPageHandlerExecuting' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>AfterOnPageHandlerExecuting</Name>
+        <Script> switch ($args.Count) {
+				 # AfterOnPageHandlerExecuting([System.Diagnostics.DiagnosticSource] $diagnosticSource, [Microsoft.AspNetCore.Mvc.Filters.PageHandlerExecutingContext] $handlerExecutingContext, [Microsoft.AspNetCore.Mvc.Filters.IPageFilter] $filter)
+		 2 { [Microsoft.AspNetCore.Mvc.Internal.MvcRazorPagesDiagnosticSourceExtensions]::AfterOnPageHandlerExecuting($this,$args[0],$args[1]) }
+
+		 default { throw "No overload for 'AfterOnPageHandlerExecuting' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>BeforeOnPageHandlerExecuted</Name>
+        <Script> switch ($args.Count) {
+				 # BeforeOnPageHandlerExecuted([System.Diagnostics.DiagnosticSource] $diagnosticSource, [Microsoft.AspNetCore.Mvc.Filters.PageHandlerExecutedContext] $handlerExecutedContext, [Microsoft.AspNetCore.Mvc.Filters.IPageFilter] $filter)
+		 2 { [Microsoft.AspNetCore.Mvc.Internal.MvcRazorPagesDiagnosticSourceExtensions]::BeforeOnPageHandlerExecuted($this,$args[0],$args[1]) }
+
+		 default { throw "No overload for 'BeforeOnPageHandlerExecuted' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>AfterOnPageHandlerExecuted</Name>
+        <Script> switch ($args.Count) {
+				 # AfterOnPageHandlerExecuted([System.Diagnostics.DiagnosticSource] $diagnosticSource, [Microsoft.AspNetCore.Mvc.Filters.PageHandlerExecutedContext] $handlerExecutedContext, [Microsoft.AspNetCore.Mvc.Filters.IPageFilter] $filter)
+		 2 { [Microsoft.AspNetCore.Mvc.Internal.MvcRazorPagesDiagnosticSourceExtensions]::AfterOnPageHandlerExecuted($this,$args[0],$args[1]) }
+
+		 default { throw "No overload for 'AfterOnPageHandlerExecuted' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>BeforeOnPageHandlerSelection</Name>
+        <Script> switch ($args.Count) {
+				 # BeforeOnPageHandlerSelection([System.Diagnostics.DiagnosticSource] $diagnosticSource, [Microsoft.AspNetCore.Mvc.Filters.PageHandlerSelectedContext] $handlerSelectedContext, [Microsoft.AspNetCore.Mvc.Filters.IAsyncPageFilter] $filter)
+		 2 { [Microsoft.AspNetCore.Mvc.Internal.MvcRazorPagesDiagnosticSourceExtensions]::BeforeOnPageHandlerSelection($this,$args[0],$args[1]) }
+
+		 default { throw "No overload for 'BeforeOnPageHandlerSelection' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>AfterOnPageHandlerSelection</Name>
+        <Script> switch ($args.Count) {
+				 # AfterOnPageHandlerSelection([System.Diagnostics.DiagnosticSource] $diagnosticSource, [Microsoft.AspNetCore.Mvc.Filters.PageHandlerSelectedContext] $handlerSelectedContext, [Microsoft.AspNetCore.Mvc.Filters.IAsyncPageFilter] $filter)
+		 2 { [Microsoft.AspNetCore.Mvc.Internal.MvcRazorPagesDiagnosticSourceExtensions]::AfterOnPageHandlerSelection($this,$args[0],$args[1]) }
+
+		 default { throw "No overload for 'AfterOnPageHandlerSelection' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>BeforeOnPageHandlerSelected</Name>
+        <Script> switch ($args.Count) {
+				 # BeforeOnPageHandlerSelected([System.Diagnostics.DiagnosticSource] $diagnosticSource, [Microsoft.AspNetCore.Mvc.Filters.PageHandlerSelectedContext] $handlerSelectedContext, [Microsoft.AspNetCore.Mvc.Filters.IPageFilter] $filter)
+		 2 { [Microsoft.AspNetCore.Mvc.Internal.MvcRazorPagesDiagnosticSourceExtensions]::BeforeOnPageHandlerSelected($this,$args[0],$args[1]) }
+
+		 default { throw "No overload for 'BeforeOnPageHandlerSelected' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>AfterOnPageHandlerSelected</Name>
+        <Script> switch ($args.Count) {
+				 # AfterOnPageHandlerSelected([System.Diagnostics.DiagnosticSource] $diagnosticSource, [Microsoft.AspNetCore.Mvc.Filters.PageHandlerSelectedContext] $handlerSelectedContext, [Microsoft.AspNetCore.Mvc.Filters.IPageFilter] $filter)
+		 2 { [Microsoft.AspNetCore.Mvc.Internal.MvcRazorPagesDiagnosticSourceExtensions]::AfterOnPageHandlerSelected($this,$args[0],$args[1]) }
+
+		 default { throw "No overload for 'AfterOnPageHandlerSelected' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>BeforeViewPage</Name>
+        <Script> switch ($args.Count) {
+				 # BeforeViewPage([System.Diagnostics.DiagnosticSource] $diagnosticSource, [Microsoft.AspNetCore.Mvc.Razor.IRazorPage] $page, [Microsoft.AspNetCore.Mvc.Rendering.ViewContext] $viewContext)
+		 2 { [Microsoft.AspNetCore.Mvc.Razor.Internal.MvcRazorDiagnosticSourceExtensions]::BeforeViewPage($this,$args[0],$args[1]) }
+
+		 default { throw "No overload for 'BeforeViewPage' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>AfterViewPage</Name>
+        <Script> switch ($args.Count) {
+				 # AfterViewPage([System.Diagnostics.DiagnosticSource] $diagnosticSource, [Microsoft.AspNetCore.Mvc.Razor.IRazorPage] $page, [Microsoft.AspNetCore.Mvc.Rendering.ViewContext] $viewContext)
+		 2 { [Microsoft.AspNetCore.Mvc.Razor.Internal.MvcRazorDiagnosticSourceExtensions]::AfterViewPage($this,$args[0],$args[1]) }
+
+		 default { throw "No overload for 'AfterViewPage' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+    </Members>
+  </Type>
+</Types>

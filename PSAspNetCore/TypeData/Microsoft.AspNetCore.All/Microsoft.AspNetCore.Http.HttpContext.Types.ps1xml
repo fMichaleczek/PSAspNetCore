@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Types>
+  <Type>
+    <Name>Microsoft.AspNetCore.Http.HttpContext</Name>
+    <Members>
+      <ScriptMethod>
+        <Name>AuthenticateAsync</Name>
+        <Script> switch ($args.Count) {
+				 # AuthenticateAsync([Microsoft.AspNetCore.Http.HttpContext] $context)
+		 0 { [Microsoft.AspNetCore.Authentication.AuthenticationHttpContextExtensions]::AuthenticateAsync($this) }
+
+				 # AuthenticateAsync([Microsoft.AspNetCore.Http.HttpContext] $context, [System.String] $scheme)
+		 1 { [Microsoft.AspNetCore.Authentication.AuthenticationHttpContextExtensions]::AuthenticateAsync($this,$args[0]) }
+
+		 default { throw "No overload for 'AuthenticateAsync' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>ChallengeAsync</Name>
+        <Script> switch ($args.Count) {
+				 # ChallengeAsync([Microsoft.AspNetCore.Http.HttpContext] $context)
+		 0 { [Microsoft.AspNetCore.Authentication.AuthenticationHttpContextExtensions]::ChallengeAsync($this) }
+
+				 # ChallengeAsync([Microsoft.AspNetCore.Http.HttpContext] $context, [System.String] $scheme)
+		 1 { [Microsoft.AspNetCore.Authentication.AuthenticationHttpContextExtensions]::ChallengeAsync($this,$args[0]) }
+
+				 # ChallengeAsync([Microsoft.AspNetCore.Http.HttpContext] $context, [System.String] $scheme, [Microsoft.AspNetCore.Authentication.AuthenticationProperties] $properties)
+		 2 { [Microsoft.AspNetCore.Authentication.AuthenticationHttpContextExtensions]::ChallengeAsync($this,$args[0],$args[1]) }
+
+		 default { throw "No overload for 'ChallengeAsync' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>ForbidAsync</Name>
+        <Script> switch ($args.Count) {
+				 # ForbidAsync([Microsoft.AspNetCore.Http.HttpContext] $context)
+		 0 { [Microsoft.AspNetCore.Authentication.AuthenticationHttpContextExtensions]::ForbidAsync($this) }
+
+				 # ForbidAsync([Microsoft.AspNetCore.Http.HttpContext] $context, [System.String] $scheme)
+		 1 { [Microsoft.AspNetCore.Authentication.AuthenticationHttpContextExtensions]::ForbidAsync($this,$args[0]) }
+
+				 # ForbidAsync([Microsoft.AspNetCore.Http.HttpContext] $context, [System.String] $scheme, [Microsoft.AspNetCore.Authentication.AuthenticationProperties] $properties)
+		 2 { [Microsoft.AspNetCore.Authentication.AuthenticationHttpContextExtensions]::ForbidAsync($this,$args[0],$args[1]) }
+
+		 default { throw "No overload for 'ForbidAsync' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>SignInAsync</Name>
+        <Script> switch ($args.Count) {
+				 # SignInAsync([Microsoft.AspNetCore.Http.HttpContext] $context, [System.Security.Claims.ClaimsPrincipal] $principal)
+		 1 { [Microsoft.AspNetCore.Authentication.AuthenticationHttpContextExtensions]::SignInAsync($this,$args[0]) }
+
+				 # SignInAsync([Microsoft.AspNetCore.Http.HttpContext] $context, [System.String] $scheme, [System.Security.Claims.ClaimsPrincipal] $principal)
+		 2 { [Microsoft.AspNetCore.Authentication.AuthenticationHttpContextExtensions]::SignInAsync($this,$args[0],$args[1]) }
+
+				 # SignInAsync([Microsoft.AspNetCore.Http.HttpContext] $context, [System.String] $scheme, [System.Security.Claims.ClaimsPrincipal] $principal, [Microsoft.AspNetCore.Authentication.AuthenticationProperties] $properties)
+		 3 { [Microsoft.AspNetCore.Authentication.AuthenticationHttpContextExtensions]::SignInAsync($this,$args[0],$args[1],$args[2]) }
+
+		 default { throw "No overload for 'SignInAsync' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>SignOutAsync</Name>
+        <Script> switch ($args.Count) {
+				 # SignOutAsync([Microsoft.AspNetCore.Http.HttpContext] $context)
+		 0 { [Microsoft.AspNetCore.Authentication.AuthenticationHttpContextExtensions]::SignOutAsync($this) }
+
+				 # SignOutAsync([Microsoft.AspNetCore.Http.HttpContext] $context, [Microsoft.AspNetCore.Authentication.AuthenticationProperties] $properties)
+		 1 { [Microsoft.AspNetCore.Authentication.AuthenticationHttpContextExtensions]::SignOutAsync($this,$args[0]) }
+
+				 # SignOutAsync([Microsoft.AspNetCore.Http.HttpContext] $context, [System.String] $scheme, [Microsoft.AspNetCore.Authentication.AuthenticationProperties] $properties)
+		 2 { [Microsoft.AspNetCore.Authentication.AuthenticationHttpContextExtensions]::SignOutAsync($this,$args[0],$args[1]) }
+
+		 default { throw "No overload for 'SignOutAsync' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>GetTokenAsync</Name>
+        <Script> switch ($args.Count) {
+				 # GetTokenAsync([Microsoft.AspNetCore.Http.HttpContext] $context, [System.String] $tokenName)
+		 1 { [Microsoft.AspNetCore.Authentication.AuthenticationHttpContextExtensions]::GetTokenAsync($this,$args[0]) }
+
+				 # GetTokenAsync([Microsoft.AspNetCore.Http.HttpContext] $context, [System.String] $scheme, [System.String] $tokenName)
+		 2 { [Microsoft.AspNetCore.Authentication.AuthenticationHttpContextExtensions]::GetTokenAsync($this,$args[0],$args[1]) }
+
+		 default { throw "No overload for 'GetTokenAsync' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>GetRouteData</Name>
+        <Script> switch ($args.Count) {
+				 # GetRouteData([Microsoft.AspNetCore.Http.HttpContext] $httpContext)
+		 0 { [Microsoft.AspNetCore.Routing.RoutingHttpContextExtensions]::GetRouteData($this) }
+
+		 default { throw "No overload for 'GetRouteData' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>GetRouteValue</Name>
+        <Script> switch ($args.Count) {
+				 # GetRouteValue([Microsoft.AspNetCore.Http.HttpContext] $httpContext, [System.String] $key)
+		 1 { [Microsoft.AspNetCore.Routing.RoutingHttpContextExtensions]::GetRouteValue($this,$args[0]) }
+
+		 default { throw "No overload for 'GetRouteValue' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+    </Members>
+  </Type>
+</Types>

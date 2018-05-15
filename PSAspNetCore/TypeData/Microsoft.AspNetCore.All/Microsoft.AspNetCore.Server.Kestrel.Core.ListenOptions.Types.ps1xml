@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Types>
+  <Type>
+    <Name>Microsoft.AspNetCore.Server.Kestrel.Core.ListenOptions</Name>
+    <Members>
+      <ScriptMethod>
+        <Name>UseConnectionLogging</Name>
+        <Script> switch ($args.Count) {
+				 # UseConnectionLogging([Microsoft.AspNetCore.Server.Kestrel.Core.ListenOptions] $listenOptions)
+		 0 { [Microsoft.AspNetCore.Hosting.ListenOptionsConnectionLoggingExtensions]::UseConnectionLogging($this) }
+
+				 # UseConnectionLogging([Microsoft.AspNetCore.Server.Kestrel.Core.ListenOptions] $listenOptions, [System.String] $loggerName)
+		 1 { [Microsoft.AspNetCore.Hosting.ListenOptionsConnectionLoggingExtensions]::UseConnectionLogging($this,$args[0]) }
+
+		 default { throw "No overload for 'UseConnectionLogging' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>UseHttps</Name>
+        <Script> switch ($args.Count) {
+				 # UseHttps([Microsoft.AspNetCore.Server.Kestrel.Core.ListenOptions] $listenOptions, [System.String] $fileName)
+		 1 { [Microsoft.AspNetCore.Hosting.ListenOptionsHttpsExtensions]::UseHttps($this,$args[0]) }
+
+				 # UseHttps([Microsoft.AspNetCore.Server.Kestrel.Core.ListenOptions] $listenOptions, [System.String] $fileName, [System.String] $password)
+		 2 { [Microsoft.AspNetCore.Hosting.ListenOptionsHttpsExtensions]::UseHttps($this,$args[0],$args[1]) }
+
+		 default { throw "No overload for 'UseHttps' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+    </Members>
+  </Type>
+</Types>

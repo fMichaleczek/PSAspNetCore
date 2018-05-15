@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Types>
+  <Type>
+    <Name>Microsoft.AspNetCore.Authentication.AuthenticationProperties</Name>
+    <Members>
+      <ScriptMethod>
+        <Name>StoreTokens</Name>
+        <Script> switch ($args.Count) {
+				 # StoreTokens([Microsoft.AspNetCore.Authentication.AuthenticationProperties] $properties, [System.Collections.Generic.IEnumerable`1[Microsoft.AspNetCore.Authentication.AuthenticationToken]] $tokens)
+		 1 { [Microsoft.AspNetCore.Authentication.AuthenticationTokenExtensions]::StoreTokens($this,$args[0]) }
+
+		 default { throw "No overload for 'StoreTokens' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>GetTokenValue</Name>
+        <Script> switch ($args.Count) {
+				 # GetTokenValue([Microsoft.AspNetCore.Authentication.AuthenticationProperties] $properties, [System.String] $tokenName)
+		 1 { [Microsoft.AspNetCore.Authentication.AuthenticationTokenExtensions]::GetTokenValue($this,$args[0]) }
+
+		 default { throw "No overload for 'GetTokenValue' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>UpdateTokenValue</Name>
+        <Script> switch ($args.Count) {
+				 # UpdateTokenValue([Microsoft.AspNetCore.Authentication.AuthenticationProperties] $properties, [System.String] $tokenName, [System.String] $tokenValue)
+		 2 { [Microsoft.AspNetCore.Authentication.AuthenticationTokenExtensions]::UpdateTokenValue($this,$args[0],$args[1]) }
+
+		 default { throw "No overload for 'UpdateTokenValue' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>GetTokens</Name>
+        <Script> switch ($args.Count) {
+				 # GetTokens([Microsoft.AspNetCore.Authentication.AuthenticationProperties] $properties)
+		 0 { [Microsoft.AspNetCore.Authentication.AuthenticationTokenExtensions]::GetTokens($this) }
+
+		 default { throw "No overload for 'GetTokens' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+    </Members>
+  </Type>
+</Types>

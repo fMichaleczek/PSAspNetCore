@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Types>
+  <Type>
+    <Name>Microsoft.AspNetCore.Razor.Language.TagHelperDescriptor</Name>
+    <Members>
+      <ScriptMethod>
+        <Name>GetTypeName</Name>
+        <Script> switch ($args.Count) {
+				 # GetTypeName([Microsoft.AspNetCore.Razor.Language.TagHelperDescriptor] $tagHelper)
+		 0 { [Microsoft.AspNetCore.Razor.Language.TagHelperDescriptorExtensions]::GetTypeName($this) }
+
+		 default { throw "No overload for 'GetTypeName' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>IsDefaultKind</Name>
+        <Script> switch ($args.Count) {
+				 # IsDefaultKind([Microsoft.AspNetCore.Razor.Language.TagHelperDescriptor] $tagHelper)
+		 0 { [Microsoft.AspNetCore.Razor.Language.TagHelperDescriptorExtensions]::IsDefaultKind($this) }
+
+		 default { throw "No overload for 'IsDefaultKind' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>KindUsesDefaultTagHelperRuntime</Name>
+        <Script> switch ($args.Count) {
+				 # KindUsesDefaultTagHelperRuntime([Microsoft.AspNetCore.Razor.Language.TagHelperDescriptor] $tagHelper)
+		 0 { [Microsoft.AspNetCore.Razor.Language.TagHelperDescriptorExtensions]::KindUsesDefaultTagHelperRuntime($this) }
+
+		 default { throw "No overload for 'KindUsesDefaultTagHelperRuntime' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+    </Members>
+  </Type>
+</Types>

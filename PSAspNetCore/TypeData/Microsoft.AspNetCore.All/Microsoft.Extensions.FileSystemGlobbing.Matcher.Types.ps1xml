@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Types>
+  <Type>
+    <Name>Microsoft.Extensions.FileSystemGlobbing.Matcher</Name>
+    <Members>
+      <ScriptMethod>
+        <Name>AddExcludePatterns</Name>
+        <Script> switch ($args.Count) {
+				 # AddExcludePatterns([Microsoft.Extensions.FileSystemGlobbing.Matcher] $matcher, [System.Collections.Generic.IEnumerable`1[System.String][]] $excludePatternsGroups)
+		 1 { [Microsoft.Extensions.FileSystemGlobbing.MatcherExtensions]::AddExcludePatterns($this,$args[0]) }
+
+		 default { throw "No overload for 'AddExcludePatterns' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>AddIncludePatterns</Name>
+        <Script> switch ($args.Count) {
+				 # AddIncludePatterns([Microsoft.Extensions.FileSystemGlobbing.Matcher] $matcher, [System.Collections.Generic.IEnumerable`1[System.String][]] $includePatternsGroups)
+		 1 { [Microsoft.Extensions.FileSystemGlobbing.MatcherExtensions]::AddIncludePatterns($this,$args[0]) }
+
+		 default { throw "No overload for 'AddIncludePatterns' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>GetResultsInFullPath</Name>
+        <Script> switch ($args.Count) {
+				 # GetResultsInFullPath([Microsoft.Extensions.FileSystemGlobbing.Matcher] $matcher, [System.String] $directoryPath)
+		 1 { [Microsoft.Extensions.FileSystemGlobbing.MatcherExtensions]::GetResultsInFullPath($this,$args[0]) }
+
+		 default { throw "No overload for 'GetResultsInFullPath' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>Match</Name>
+        <Script> switch ($args.Count) {
+				 # Match([Microsoft.Extensions.FileSystemGlobbing.Matcher] $matcher, [System.String] $file)
+		 1 { [Microsoft.Extensions.FileSystemGlobbing.MatcherExtensions]::Match($this,$args[0]) }
+
+				 # Match([Microsoft.Extensions.FileSystemGlobbing.Matcher] $matcher, [System.String] $rootDir, [System.String] $file)
+		 2 { [Microsoft.Extensions.FileSystemGlobbing.MatcherExtensions]::Match($this,$args[0],$args[1]) }
+
+		 default { throw "No overload for 'Match' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+    </Members>
+  </Type>
+</Types>

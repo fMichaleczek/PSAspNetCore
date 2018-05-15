@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Types>
+  <Type>
+    <Name>Microsoft.Extensions.DependencyModel.RuntimeLibrary</Name>
+    <Members>
+      <ScriptMethod>
+        <Name>GetDefaultNativeAssets</Name>
+        <Script> switch ($args.Count) {
+				 # GetDefaultNativeAssets([Microsoft.Extensions.DependencyModel.RuntimeLibrary] $self, [Microsoft.Extensions.DependencyModel.DependencyContext] $context)
+		 1 { [Microsoft.Extensions.DependencyModel.DependencyContextExtensions]::GetDefaultNativeAssets($this,$args[0]) }
+
+		 default { throw "No overload for 'GetDefaultNativeAssets' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>GetRuntimeNativeAssets</Name>
+        <Script> switch ($args.Count) {
+				 # GetRuntimeNativeAssets([Microsoft.Extensions.DependencyModel.RuntimeLibrary] $self, [Microsoft.Extensions.DependencyModel.DependencyContext] $context, [System.String] $runtimeIdentifier)
+		 2 { [Microsoft.Extensions.DependencyModel.DependencyContextExtensions]::GetRuntimeNativeAssets($this,$args[0],$args[1]) }
+
+		 default { throw "No overload for 'GetRuntimeNativeAssets' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>GetDefaultAssemblyNames</Name>
+        <Script> switch ($args.Count) {
+				 # GetDefaultAssemblyNames([Microsoft.Extensions.DependencyModel.RuntimeLibrary] $self, [Microsoft.Extensions.DependencyModel.DependencyContext] $context)
+		 1 { [Microsoft.Extensions.DependencyModel.DependencyContextExtensions]::GetDefaultAssemblyNames($this,$args[0]) }
+
+		 default { throw "No overload for 'GetDefaultAssemblyNames' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>GetRuntimeAssemblyNames</Name>
+        <Script> switch ($args.Count) {
+				 # GetRuntimeAssemblyNames([Microsoft.Extensions.DependencyModel.RuntimeLibrary] $self, [Microsoft.Extensions.DependencyModel.DependencyContext] $context, [System.String] $runtimeIdentifier)
+		 2 { [Microsoft.Extensions.DependencyModel.DependencyContextExtensions]::GetRuntimeAssemblyNames($this,$args[0],$args[1]) }
+
+		 default { throw "No overload for 'GetRuntimeAssemblyNames' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+    </Members>
+  </Type>
+</Types>

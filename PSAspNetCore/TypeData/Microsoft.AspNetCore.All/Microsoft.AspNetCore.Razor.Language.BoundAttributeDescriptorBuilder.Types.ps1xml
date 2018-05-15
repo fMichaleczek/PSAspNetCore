@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Types>
+  <Type>
+    <Name>Microsoft.AspNetCore.Razor.Language.BoundAttributeDescriptorBuilder</Name>
+    <Members>
+      <ScriptMethod>
+        <Name>SetPropertyName</Name>
+        <Script> switch ($args.Count) {
+				 # SetPropertyName([Microsoft.AspNetCore.Razor.Language.BoundAttributeDescriptorBuilder] $builder, [System.String] $propertyName)
+		 1 { [Microsoft.AspNetCore.Razor.Language.BoundAttributeDescriptorBuilderExtensions]::SetPropertyName($this,$args[0]) }
+
+		 default { throw "No overload for 'SetPropertyName' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>GetPropertyName</Name>
+        <Script> switch ($args.Count) {
+				 # GetPropertyName([Microsoft.AspNetCore.Razor.Language.BoundAttributeDescriptorBuilder] $builder)
+		 0 { [Microsoft.AspNetCore.Razor.Language.BoundAttributeDescriptorBuilderExtensions]::GetPropertyName($this) }
+
+		 default { throw "No overload for 'GetPropertyName' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>AsDictionary</Name>
+        <Script> switch ($args.Count) {
+				 # AsDictionary([Microsoft.AspNetCore.Razor.Language.BoundAttributeDescriptorBuilder] $builder, [System.String] $attributeNamePrefix, [System.String] $valueTypeName)
+		 2 { [Microsoft.AspNetCore.Razor.Language.BoundAttributeDescriptorBuilderExtensions]::AsDictionary($this,$args[0],$args[1]) }
+
+		 default { throw "No overload for 'AsDictionary' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+    </Members>
+  </Type>
+</Types>

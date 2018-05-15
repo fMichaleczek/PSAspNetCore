@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Types>
+  <Type>
+    <Name>System.Xml.Linq.XElement</Name>
+    <Members>
+      <ScriptMethod>
+        <Name>MarkAsRequiresEncryption</Name>
+        <Script> switch ($args.Count) {
+				 # MarkAsRequiresEncryption([System.Xml.Linq.XElement] $element)
+		 0 { [Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.XmlExtensions]::MarkAsRequiresEncryption($this) }
+
+		 default { throw "No overload for 'MarkAsRequiresEncryption' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+    </Members>
+  </Type>
+</Types>

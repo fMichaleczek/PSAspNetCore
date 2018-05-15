@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Types>
+  <Type>
+    <Name>System.Data.Common.DbDataReader</Name>
+    <Members>
+      <ScriptMethod>
+        <Name>GetColumnSchema</Name>
+        <Script> switch ($args.Count) {
+				 # GetColumnSchema([System.Data.Common.DbDataReader] $reader)
+		 0 { [System.Data.Common.DbDataReaderExtensions]::GetColumnSchema($this) }
+
+		 default { throw "No overload for 'GetColumnSchema' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>CanGetColumnSchema</Name>
+        <Script> switch ($args.Count) {
+				 # CanGetColumnSchema([System.Data.Common.DbDataReader] $reader)
+		 0 { [System.Data.Common.DbDataReaderExtensions]::CanGetColumnSchema($this) }
+
+		 default { throw "No overload for 'CanGetColumnSchema' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+    </Members>
+  </Type>
+</Types>

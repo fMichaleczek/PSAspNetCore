@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Types>
+  <Type>
+    <Name>System.Reflection.Metadata.MetadataReader</Name>
+    <Members>
+      <ScriptMethod>
+        <Name>GetTableRowCount</Name>
+        <Script> switch ($args.Count) {
+				 # GetTableRowCount([System.Reflection.Metadata.MetadataReader] $reader, [System.Reflection.Metadata.Ecma335.TableIndex] $tableIndex)
+		 1 { [System.Reflection.Metadata.Ecma335.MetadataReaderExtensions]::GetTableRowCount($this,$args[0]) }
+
+		 default { throw "No overload for 'GetTableRowCount' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>GetTableRowSize</Name>
+        <Script> switch ($args.Count) {
+				 # GetTableRowSize([System.Reflection.Metadata.MetadataReader] $reader, [System.Reflection.Metadata.Ecma335.TableIndex] $tableIndex)
+		 1 { [System.Reflection.Metadata.Ecma335.MetadataReaderExtensions]::GetTableRowSize($this,$args[0]) }
+
+		 default { throw "No overload for 'GetTableRowSize' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>GetTableMetadataOffset</Name>
+        <Script> switch ($args.Count) {
+				 # GetTableMetadataOffset([System.Reflection.Metadata.MetadataReader] $reader, [System.Reflection.Metadata.Ecma335.TableIndex] $tableIndex)
+		 1 { [System.Reflection.Metadata.Ecma335.MetadataReaderExtensions]::GetTableMetadataOffset($this,$args[0]) }
+
+		 default { throw "No overload for 'GetTableMetadataOffset' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>GetHeapSize</Name>
+        <Script> switch ($args.Count) {
+				 # GetHeapSize([System.Reflection.Metadata.MetadataReader] $reader, [System.Reflection.Metadata.Ecma335.HeapIndex] $heapIndex)
+		 1 { [System.Reflection.Metadata.Ecma335.MetadataReaderExtensions]::GetHeapSize($this,$args[0]) }
+
+		 default { throw "No overload for 'GetHeapSize' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>GetHeapMetadataOffset</Name>
+        <Script> switch ($args.Count) {
+				 # GetHeapMetadataOffset([System.Reflection.Metadata.MetadataReader] $reader, [System.Reflection.Metadata.Ecma335.HeapIndex] $heapIndex)
+		 1 { [System.Reflection.Metadata.Ecma335.MetadataReaderExtensions]::GetHeapMetadataOffset($this,$args[0]) }
+
+		 default { throw "No overload for 'GetHeapMetadataOffset' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>GetNextHandle</Name>
+        <Script> switch ($args.Count) {
+				 # GetNextHandle([System.Reflection.Metadata.MetadataReader] $reader, [System.Reflection.Metadata.UserStringHandle] $handle)
+		 1 { [System.Reflection.Metadata.Ecma335.MetadataReaderExtensions]::GetNextHandle($this,$args[0]) }
+
+		 default { throw "No overload for 'GetNextHandle' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>GetEditAndContinueLogEntries</Name>
+        <Script> switch ($args.Count) {
+				 # GetEditAndContinueLogEntries([System.Reflection.Metadata.MetadataReader] $reader)
+		 0 { [System.Reflection.Metadata.Ecma335.MetadataReaderExtensions]::GetEditAndContinueLogEntries($this) }
+
+		 default { throw "No overload for 'GetEditAndContinueLogEntries' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>GetEditAndContinueMapEntries</Name>
+        <Script> switch ($args.Count) {
+				 # GetEditAndContinueMapEntries([System.Reflection.Metadata.MetadataReader] $reader)
+		 0 { [System.Reflection.Metadata.Ecma335.MetadataReaderExtensions]::GetEditAndContinueMapEntries($this) }
+
+		 default { throw "No overload for 'GetEditAndContinueMapEntries' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>GetTypesWithProperties</Name>
+        <Script> switch ($args.Count) {
+				 # GetTypesWithProperties([System.Reflection.Metadata.MetadataReader] $reader)
+		 0 { [System.Reflection.Metadata.Ecma335.MetadataReaderExtensions]::GetTypesWithProperties($this) }
+
+		 default { throw "No overload for 'GetTypesWithProperties' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>GetTypesWithEvents</Name>
+        <Script> switch ($args.Count) {
+				 # GetTypesWithEvents([System.Reflection.Metadata.MetadataReader] $reader)
+		 0 { [System.Reflection.Metadata.Ecma335.MetadataReaderExtensions]::GetTypesWithEvents($this) }
+
+		 default { throw "No overload for 'GetTypesWithEvents' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>ResolveSignatureTypeKind</Name>
+        <Script> switch ($args.Count) {
+				 # ResolveSignatureTypeKind([System.Reflection.Metadata.MetadataReader] $reader, [System.Reflection.Metadata.EntityHandle] $typeHandle, [System.Byte] $rawTypeKind)
+		 2 { [System.Reflection.Metadata.Ecma335.MetadataReaderExtensions]::ResolveSignatureTypeKind($this,$args[0],$args[1]) }
+
+		 default { throw "No overload for 'ResolveSignatureTypeKind' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>GetRowNumber</Name>
+        <Script> switch ($args.Count) {
+				 # GetRowNumber([System.Reflection.Metadata.MetadataReader] $reader, [System.Reflection.Metadata.EntityHandle] $handle)
+		 1 { [System.Reflection.Metadata.Ecma335.MetadataTokens]::GetRowNumber($this,$args[0]) }
+
+		 default { throw "No overload for 'GetRowNumber' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>GetHeapOffset</Name>
+        <Script> switch ($args.Count) {
+				 # GetHeapOffset([System.Reflection.Metadata.MetadataReader] $reader, [System.Reflection.Metadata.Handle] $handle)
+		 1 { [System.Reflection.Metadata.Ecma335.MetadataTokens]::GetHeapOffset($this,$args[0]) }
+
+		 default { throw "No overload for 'GetHeapOffset' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>GetToken</Name>
+        <Script> switch ($args.Count) {
+				 # GetToken([System.Reflection.Metadata.MetadataReader] $reader, [System.Reflection.Metadata.EntityHandle] $handle)
+		 1 { [System.Reflection.Metadata.Ecma335.MetadataTokens]::GetToken($this,$args[0]) }
+
+		 default { throw "No overload for 'GetToken' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+    </Members>
+  </Type>
+</Types>

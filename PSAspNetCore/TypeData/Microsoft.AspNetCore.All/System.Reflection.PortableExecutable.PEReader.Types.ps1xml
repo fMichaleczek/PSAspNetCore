@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Types>
+  <Type>
+    <Name>System.Reflection.PortableExecutable.PEReader</Name>
+    <Members>
+      <ScriptMethod>
+        <Name>GetMethodBody</Name>
+        <Script> switch ($args.Count) {
+				 # GetMethodBody([System.Reflection.PortableExecutable.PEReader] $peReader, [System.Int32] $relativeVirtualAddress)
+		 1 { [System.Reflection.Metadata.PEReaderExtensions]::GetMethodBody($this,$args[0]) }
+
+		 default { throw "No overload for 'GetMethodBody' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>GetMetadataReader</Name>
+        <Script> switch ($args.Count) {
+				 # GetMetadataReader([System.Reflection.PortableExecutable.PEReader] $peReader)
+		 0 { [System.Reflection.Metadata.PEReaderExtensions]::GetMetadataReader($this) }
+
+				 # GetMetadataReader([System.Reflection.PortableExecutable.PEReader] $peReader, [System.Reflection.Metadata.MetadataReaderOptions] $options)
+		 1 { [System.Reflection.Metadata.PEReaderExtensions]::GetMetadataReader($this,$args[0]) }
+
+				 # GetMetadataReader([System.Reflection.PortableExecutable.PEReader] $peReader, [System.Reflection.Metadata.MetadataReaderOptions] $options, [System.Reflection.Metadata.MetadataStringDecoder] $utf8Decoder)
+		 2 { [System.Reflection.Metadata.PEReaderExtensions]::GetMetadataReader($this,$args[0],$args[1]) }
+
+		 default { throw "No overload for 'GetMetadataReader' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+    </Members>
+  </Type>
+</Types>

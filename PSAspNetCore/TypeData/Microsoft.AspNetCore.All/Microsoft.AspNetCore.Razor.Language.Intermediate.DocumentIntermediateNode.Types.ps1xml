@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Types>
+  <Type>
+    <Name>Microsoft.AspNetCore.Razor.Language.Intermediate.DocumentIntermediateNode</Name>
+    <Members>
+      <ScriptMethod>
+        <Name>FindPrimaryClass</Name>
+        <Script> switch ($args.Count) {
+				 # FindPrimaryClass([Microsoft.AspNetCore.Razor.Language.Intermediate.DocumentIntermediateNode] $node)
+		 0 { [Microsoft.AspNetCore.Razor.Language.Intermediate.DocumentIntermediateNodeExtensions]::FindPrimaryClass($this) }
+
+		 default { throw "No overload for 'FindPrimaryClass' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>FindPrimaryMethod</Name>
+        <Script> switch ($args.Count) {
+				 # FindPrimaryMethod([Microsoft.AspNetCore.Razor.Language.Intermediate.DocumentIntermediateNode] $node)
+		 0 { [Microsoft.AspNetCore.Razor.Language.Intermediate.DocumentIntermediateNodeExtensions]::FindPrimaryMethod($this) }
+
+		 default { throw "No overload for 'FindPrimaryMethod' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>FindPrimaryNamespace</Name>
+        <Script> switch ($args.Count) {
+				 # FindPrimaryNamespace([Microsoft.AspNetCore.Razor.Language.Intermediate.DocumentIntermediateNode] $node)
+		 0 { [Microsoft.AspNetCore.Razor.Language.Intermediate.DocumentIntermediateNodeExtensions]::FindPrimaryNamespace($this) }
+
+		 default { throw "No overload for 'FindPrimaryNamespace' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>FindDirectiveReferences</Name>
+        <Script> switch ($args.Count) {
+				 # FindDirectiveReferences([Microsoft.AspNetCore.Razor.Language.Intermediate.DocumentIntermediateNode] $node, [Microsoft.AspNetCore.Razor.Language.DirectiveDescriptor] $directive)
+		 1 { [Microsoft.AspNetCore.Razor.Language.Intermediate.DocumentIntermediateNodeExtensions]::FindDirectiveReferences($this,$args[0]) }
+
+		 default { throw "No overload for 'FindDirectiveReferences' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+    </Members>
+  </Type>
+</Types>

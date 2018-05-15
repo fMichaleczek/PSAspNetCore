@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Types>
+  <Type>
+    <Name>Microsoft.AspNetCore.Http.HttpResponse</Name>
+    <Members>
+      <ScriptMethod>
+        <Name>GetTypedHeaders</Name>
+        <Script> switch ($args.Count) {
+				 # GetTypedHeaders([Microsoft.AspNetCore.Http.HttpResponse] $response)
+		 0 { [Microsoft.AspNetCore.Http.HeaderDictionaryTypeExtensions]::GetTypedHeaders($this) }
+
+		 default { throw "No overload for 'GetTypedHeaders' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>WriteAsync</Name>
+        <Script> switch ($args.Count) {
+				 # WriteAsync([Microsoft.AspNetCore.Http.HttpResponse] $response, [System.String] $text, [System.Threading.CancellationToken] $cancellationToken)
+		 2 { [Microsoft.AspNetCore.Http.HttpResponseWritingExtensions]::WriteAsync($this,$args[0],$args[1]) }
+
+				 # WriteAsync([Microsoft.AspNetCore.Http.HttpResponse] $response, [System.String] $text, [System.Text.Encoding] $encoding, [System.Threading.CancellationToken] $cancellationToken)
+		 3 { [Microsoft.AspNetCore.Http.HttpResponseWritingExtensions]::WriteAsync($this,$args[0],$args[1],$args[2]) }
+
+		 default { throw "No overload for 'WriteAsync' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>Clear</Name>
+        <Script> switch ($args.Count) {
+				 # Clear([Microsoft.AspNetCore.Http.HttpResponse] $response)
+		 0 { [Microsoft.AspNetCore.Http.ResponseExtensions]::Clear($this) }
+
+		 default { throw "No overload for 'Clear' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>SendFileAsync</Name>
+        <Script> switch ($args.Count) {
+				 # SendFileAsync([Microsoft.AspNetCore.Http.HttpResponse] $response, [Microsoft.Extensions.FileProviders.IFileInfo] $file, [System.Threading.CancellationToken] $cancellationToken)
+		 2 { [Microsoft.AspNetCore.Http.SendFileResponseExtensions]::SendFileAsync($this,$args[0],$args[1]) }
+
+				 # SendFileAsync([Microsoft.AspNetCore.Http.HttpResponse] $response, [Microsoft.Extensions.FileProviders.IFileInfo] $file, [System.Int64] $offset, [System.Nullable`1[System.Int64]] $count, [System.Threading.CancellationToken] $cancellationToken)
+		 4 { [Microsoft.AspNetCore.Http.SendFileResponseExtensions]::SendFileAsync($this,$args[0],$args[1],$args[2],$args[3]) }
+
+		 default { throw "No overload for 'SendFileAsync' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+    </Members>
+  </Type>
+</Types>

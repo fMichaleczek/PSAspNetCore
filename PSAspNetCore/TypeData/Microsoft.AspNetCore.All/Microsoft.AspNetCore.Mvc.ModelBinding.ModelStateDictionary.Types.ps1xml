@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Types>
+  <Type>
+    <Name>Microsoft.AspNetCore.Mvc.ModelBinding.ModelStateDictionary</Name>
+    <Members>
+      <ScriptMethod>
+        <Name>AddModelError</Name>
+        <Script> switch ($args.Count) {
+				 # AddModelError([Microsoft.AspNetCore.Mvc.ModelBinding.ModelStateDictionary] $modelState, [System.Linq.Expressions.Expression`1[System.Func`2[TModel,System.Object]]] $expression, [System.String] $errorMessage)
+		 2 { [Microsoft.AspNetCore.Mvc.ModelBinding.ModelStateDictionaryExtensions]::AddModelError($this,$args[0],$args[1]) }
+
+				 # AddModelError([Microsoft.AspNetCore.Mvc.ModelBinding.ModelStateDictionary] $modelState, [System.Linq.Expressions.Expression`1[System.Func`2[TModel,System.Object]]] $expression, [System.Exception] $exception, [Microsoft.AspNetCore.Mvc.ModelBinding.ModelMetadata] $metadata)
+		 3 { [Microsoft.AspNetCore.Mvc.ModelBinding.ModelStateDictionaryExtensions]::AddModelError($this,$args[0],$args[1],$args[2]) }
+
+		 default { throw "No overload for 'AddModelError' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>Remove</Name>
+        <Script> switch ($args.Count) {
+				 # Remove([Microsoft.AspNetCore.Mvc.ModelBinding.ModelStateDictionary] $modelState, [System.Linq.Expressions.Expression`1[System.Func`2[TModel,System.Object]]] $expression)
+		 1 { [Microsoft.AspNetCore.Mvc.ModelBinding.ModelStateDictionaryExtensions]::Remove($this,$args[0]) }
+
+		 default { throw "No overload for 'Remove' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>RemoveAll</Name>
+        <Script> switch ($args.Count) {
+				 # RemoveAll([Microsoft.AspNetCore.Mvc.ModelBinding.ModelStateDictionary] $modelState, [System.Linq.Expressions.Expression`1[System.Func`2[TModel,System.Object]]] $expression)
+		 1 { [Microsoft.AspNetCore.Mvc.ModelBinding.ModelStateDictionaryExtensions]::RemoveAll($this,$args[0]) }
+
+		 default { throw "No overload for 'RemoveAll' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+    </Members>
+  </Type>
+</Types>

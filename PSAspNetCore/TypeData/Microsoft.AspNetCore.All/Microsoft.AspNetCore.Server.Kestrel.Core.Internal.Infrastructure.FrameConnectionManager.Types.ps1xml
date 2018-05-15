@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Types>
+  <Type>
+    <Name>Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Infrastructure.FrameConnectionManager</Name>
+    <Members>
+      <ScriptMethod>
+        <Name>CloseAllConnectionsAsync</Name>
+        <Script> switch ($args.Count) {
+				 # CloseAllConnectionsAsync([Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Infrastructure.FrameConnectionManager] $connectionManager, [System.Threading.CancellationToken] $token)
+		 1 { [Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Infrastructure.FrameConnectionManagerShutdownExtensions]::CloseAllConnectionsAsync($this,$args[0]) }
+
+		 default { throw "No overload for 'CloseAllConnectionsAsync' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>AbortAllConnectionsAsync</Name>
+        <Script> switch ($args.Count) {
+				 # AbortAllConnectionsAsync([Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Infrastructure.FrameConnectionManager] $connectionManager)
+		 0 { [Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Infrastructure.FrameConnectionManagerShutdownExtensions]::AbortAllConnectionsAsync($this) }
+
+		 default { throw "No overload for 'AbortAllConnectionsAsync' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+    </Members>
+  </Type>
+</Types>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Types>
+  <Type>
+    <Name>Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServerOptions</Name>
+    <Members>
+      <ScriptMethod>
+        <Name>UseSystemd</Name>
+        <Script> switch ($args.Count) {
+				 # UseSystemd([Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServerOptions] $options)
+		 0 { [Microsoft.AspNetCore.Hosting.KestrelServerOptionsSystemdExtensions]::UseSystemd($this) }
+
+				 # UseSystemd([Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServerOptions] $options, [System.Action`1[Microsoft.AspNetCore.Server.Kestrel.Core.ListenOptions]] $configure)
+		 1 { [Microsoft.AspNetCore.Hosting.KestrelServerOptionsSystemdExtensions]::UseSystemd($this,$args[0]) }
+
+		 default { throw "No overload for 'UseSystemd' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+    </Members>
+  </Type>
+</Types>

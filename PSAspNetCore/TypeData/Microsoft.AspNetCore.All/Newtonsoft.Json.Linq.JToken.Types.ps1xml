@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Types>
+  <Type>
+    <Name>Newtonsoft.Json.Linq.JToken</Name>
+    <Members>
+      <ScriptMethod>
+        <Name>Values</Name>
+        <Script> switch ($args.Count) {
+				 # Values([System.Collections.Generic.IEnumerable`1[Newtonsoft.Json.Linq.JToken]] $source)
+		 0 { [Newtonsoft.Json.Linq.Extensions]::Values($this) }
+
+				 # Values([System.Collections.Generic.IEnumerable`1[Newtonsoft.Json.Linq.JToken]] $source, [System.Object] $key)
+		 1 { [Newtonsoft.Json.Linq.Extensions]::Values($this,$args[0]) }
+
+		 default { throw "No overload for 'Values' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>Value</Name>
+        <Script> switch ($args.Count) {
+				 # Value([System.Collections.Generic.IEnumerable`1[Newtonsoft.Json.Linq.JToken]] $value)
+		 0 { [Newtonsoft.Json.Linq.Extensions]::Value($this) }
+
+		 default { throw "No overload for 'Value' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>AsJEnumerable</Name>
+        <Script> switch ($args.Count) {
+				 # AsJEnumerable([System.Collections.Generic.IEnumerable`1[Newtonsoft.Json.Linq.JToken]] $source)
+		 0 { [Newtonsoft.Json.Linq.Extensions]::AsJEnumerable($this) }
+
+		 default { throw "No overload for 'AsJEnumerable' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>IsValid</Name>
+        <Script> switch ($args.Count) {
+				 # IsValid([Newtonsoft.Json.Linq.JToken] $source, [Newtonsoft.Json.Schema.JsonSchema] $schema)
+		 1 { [Newtonsoft.Json.Schema.Extensions]::IsValid($this,$args[0]) }
+
+				 # IsValid([Newtonsoft.Json.Linq.JToken] $source, [Newtonsoft.Json.Schema.JsonSchema] $schema, [System.Collections.Generic.IList`1[System.String]&amp;] $errorMessages)
+		 2 { [Newtonsoft.Json.Schema.Extensions]::IsValid($this,$args[0],$args[1]) }
+
+		 default { throw "No overload for 'IsValid' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>Validate</Name>
+        <Script> switch ($args.Count) {
+				 # Validate([Newtonsoft.Json.Linq.JToken] $source, [Newtonsoft.Json.Schema.JsonSchema] $schema)
+		 1 { [Newtonsoft.Json.Schema.Extensions]::Validate($this,$args[0]) }
+
+				 # Validate([Newtonsoft.Json.Linq.JToken] $source, [Newtonsoft.Json.Schema.JsonSchema] $schema, [Newtonsoft.Json.Schema.ValidationEventHandler] $validationEventHandler)
+		 2 { [Newtonsoft.Json.Schema.Extensions]::Validate($this,$args[0],$args[1]) }
+
+		 default { throw "No overload for 'Validate' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+    </Members>
+  </Type>
+</Types>

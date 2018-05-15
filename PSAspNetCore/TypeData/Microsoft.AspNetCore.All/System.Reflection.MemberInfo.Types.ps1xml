@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Types>
+  <Type>
+    <Name>System.Reflection.MemberInfo</Name>
+    <Members>
+      <ScriptMethod>
+        <Name>HasMetadataToken</Name>
+        <Script> switch ($args.Count) {
+				 # HasMetadataToken([System.Reflection.MemberInfo] $member)
+		 0 { [System.Reflection.MemberInfoExtensions]::HasMetadataToken($this) }
+
+		 default { throw "No overload for 'HasMetadataToken' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>GetMetadataToken</Name>
+        <Script> switch ($args.Count) {
+				 # GetMetadataToken([System.Reflection.MemberInfo] $member)
+		 0 { [System.Reflection.MemberInfoExtensions]::GetMetadataToken($this) }
+
+		 default { throw "No overload for 'GetMetadataToken' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+    </Members>
+  </Type>
+</Types>

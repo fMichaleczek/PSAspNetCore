@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Types>
+  <Type>
+    <Name>Microsoft.AspNetCore.WebUtilities.MultipartSection</Name>
+    <Members>
+      <ScriptMethod>
+        <Name>EnableRewind</Name>
+        <Script> switch ($args.Count) {
+				 # EnableRewind([Microsoft.AspNetCore.WebUtilities.MultipartSection] $section, [System.Action`1[System.IDisposable]] $registerForDispose, [System.Int32] $bufferThreshold, [System.Nullable`1[System.Int64]] $bufferLimit)
+		 3 { [Microsoft.AspNetCore.Http.Internal.BufferingHelper]::EnableRewind($this,$args[0],$args[1],$args[2]) }
+
+		 default { throw "No overload for 'EnableRewind' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>AsFileSection</Name>
+        <Script> switch ($args.Count) {
+				 # AsFileSection([Microsoft.AspNetCore.WebUtilities.MultipartSection] $section)
+		 0 { [Microsoft.AspNetCore.WebUtilities.MultipartSectionConverterExtensions]::AsFileSection($this) }
+
+		 default { throw "No overload for 'AsFileSection' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>AsFormDataSection</Name>
+        <Script> switch ($args.Count) {
+				 # AsFormDataSection([Microsoft.AspNetCore.WebUtilities.MultipartSection] $section)
+		 0 { [Microsoft.AspNetCore.WebUtilities.MultipartSectionConverterExtensions]::AsFormDataSection($this) }
+
+		 default { throw "No overload for 'AsFormDataSection' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>GetContentDispositionHeader</Name>
+        <Script> switch ($args.Count) {
+				 # GetContentDispositionHeader([Microsoft.AspNetCore.WebUtilities.MultipartSection] $section)
+		 0 { [Microsoft.AspNetCore.WebUtilities.MultipartSectionConverterExtensions]::GetContentDispositionHeader($this) }
+
+		 default { throw "No overload for 'GetContentDispositionHeader' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>ReadAsStringAsync</Name>
+        <Script> switch ($args.Count) {
+				 # ReadAsStringAsync([Microsoft.AspNetCore.WebUtilities.MultipartSection] $section)
+		 0 { [Microsoft.AspNetCore.WebUtilities.MultipartSectionStreamExtensions]::ReadAsStringAsync($this) }
+
+		 default { throw "No overload for 'ReadAsStringAsync' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+    </Members>
+  </Type>
+</Types>

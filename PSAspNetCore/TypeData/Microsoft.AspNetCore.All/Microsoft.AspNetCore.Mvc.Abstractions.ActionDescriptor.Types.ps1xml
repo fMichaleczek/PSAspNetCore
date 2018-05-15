@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Types>
+  <Type>
+    <Name>Microsoft.AspNetCore.Mvc.Abstractions.ActionDescriptor</Name>
+    <Members>
+      <ScriptMethod>
+        <Name>GetProperty</Name>
+        <Script> switch ($args.Count) {
+				 # GetProperty([Microsoft.AspNetCore.Mvc.Abstractions.ActionDescriptor] $actionDescriptor)
+		 0 { [Microsoft.AspNetCore.Mvc.Abstractions.ActionDescriptorExtensions]::GetProperty($this) }
+
+		 default { throw "No overload for 'GetProperty' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>SetProperty</Name>
+        <Script> switch ($args.Count) {
+				 # SetProperty([Microsoft.AspNetCore.Mvc.Abstractions.ActionDescriptor] $actionDescriptor, [T] $value)
+		 1 { [Microsoft.AspNetCore.Mvc.Abstractions.ActionDescriptorExtensions]::SetProperty($this,$args[0]) }
+
+		 default { throw "No overload for 'SetProperty' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+    </Members>
+  </Type>
+</Types>

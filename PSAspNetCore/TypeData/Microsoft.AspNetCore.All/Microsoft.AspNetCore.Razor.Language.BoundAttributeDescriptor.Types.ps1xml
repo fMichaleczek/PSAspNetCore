@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Types>
+  <Type>
+    <Name>Microsoft.AspNetCore.Razor.Language.BoundAttributeDescriptor</Name>
+    <Members>
+      <ScriptMethod>
+        <Name>GetPropertyName</Name>
+        <Script> switch ($args.Count) {
+				 # GetPropertyName([Microsoft.AspNetCore.Razor.Language.BoundAttributeDescriptor] $attribute)
+		 0 { [Microsoft.AspNetCore.Razor.Language.BoundAttributeDescriptorExtensions]::GetPropertyName($this) }
+
+		 default { throw "No overload for 'GetPropertyName' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>IsDefaultKind</Name>
+        <Script> switch ($args.Count) {
+				 # IsDefaultKind([Microsoft.AspNetCore.Razor.Language.BoundAttributeDescriptor] $attribute)
+		 0 { [Microsoft.AspNetCore.Razor.Language.BoundAttributeDescriptorExtensions]::IsDefaultKind($this) }
+
+		 default { throw "No overload for 'IsDefaultKind' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+    </Members>
+  </Type>
+</Types>

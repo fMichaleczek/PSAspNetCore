@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Types>
+  <Type>
+    <Name>Microsoft.AspNetCore.Razor.Language.RazorCodeDocument</Name>
+    <Members>
+      <ScriptMethod>
+        <Name>GetTagHelperContext</Name>
+        <Script> switch ($args.Count) {
+				 # GetTagHelperContext([Microsoft.AspNetCore.Razor.Language.RazorCodeDocument] $document)
+		 0 { [Microsoft.AspNetCore.Razor.Language.RazorCodeDocumentExtensions]::GetTagHelperContext($this) }
+
+		 default { throw "No overload for 'GetTagHelperContext' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>SetTagHelperContext</Name>
+        <Script> switch ($args.Count) {
+				 # SetTagHelperContext([Microsoft.AspNetCore.Razor.Language.RazorCodeDocument] $document, [Microsoft.AspNetCore.Razor.Language.TagHelperDocumentContext] $context)
+		 1 { [Microsoft.AspNetCore.Razor.Language.RazorCodeDocumentExtensions]::SetTagHelperContext($this,$args[0]) }
+
+		 default { throw "No overload for 'SetTagHelperContext' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>GetSyntaxTree</Name>
+        <Script> switch ($args.Count) {
+				 # GetSyntaxTree([Microsoft.AspNetCore.Razor.Language.RazorCodeDocument] $document)
+		 0 { [Microsoft.AspNetCore.Razor.Language.RazorCodeDocumentExtensions]::GetSyntaxTree($this) }
+
+		 default { throw "No overload for 'GetSyntaxTree' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>SetSyntaxTree</Name>
+        <Script> switch ($args.Count) {
+				 # SetSyntaxTree([Microsoft.AspNetCore.Razor.Language.RazorCodeDocument] $document, [Microsoft.AspNetCore.Razor.Language.RazorSyntaxTree] $syntaxTree)
+		 1 { [Microsoft.AspNetCore.Razor.Language.RazorCodeDocumentExtensions]::SetSyntaxTree($this,$args[0]) }
+
+		 default { throw "No overload for 'SetSyntaxTree' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>GetImportSyntaxTrees</Name>
+        <Script> switch ($args.Count) {
+				 # GetImportSyntaxTrees([Microsoft.AspNetCore.Razor.Language.RazorCodeDocument] $document)
+		 0 { [Microsoft.AspNetCore.Razor.Language.RazorCodeDocumentExtensions]::GetImportSyntaxTrees($this) }
+
+		 default { throw "No overload for 'GetImportSyntaxTrees' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>SetImportSyntaxTrees</Name>
+        <Script> switch ($args.Count) {
+				 # SetImportSyntaxTrees([Microsoft.AspNetCore.Razor.Language.RazorCodeDocument] $document, [System.Collections.Generic.IReadOnlyList`1[Microsoft.AspNetCore.Razor.Language.RazorSyntaxTree]] $syntaxTrees)
+		 1 { [Microsoft.AspNetCore.Razor.Language.RazorCodeDocumentExtensions]::SetImportSyntaxTrees($this,$args[0]) }
+
+		 default { throw "No overload for 'SetImportSyntaxTrees' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>GetDocumentIntermediateNode</Name>
+        <Script> switch ($args.Count) {
+				 # GetDocumentIntermediateNode([Microsoft.AspNetCore.Razor.Language.RazorCodeDocument] $document)
+		 0 { [Microsoft.AspNetCore.Razor.Language.RazorCodeDocumentExtensions]::GetDocumentIntermediateNode($this) }
+
+		 default { throw "No overload for 'GetDocumentIntermediateNode' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>SetDocumentIntermediateNode</Name>
+        <Script> switch ($args.Count) {
+				 # SetDocumentIntermediateNode([Microsoft.AspNetCore.Razor.Language.RazorCodeDocument] $document, [Microsoft.AspNetCore.Razor.Language.Intermediate.DocumentIntermediateNode] $documentNode)
+		 1 { [Microsoft.AspNetCore.Razor.Language.RazorCodeDocumentExtensions]::SetDocumentIntermediateNode($this,$args[0]) }
+
+		 default { throw "No overload for 'SetDocumentIntermediateNode' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>GetCSharpDocument</Name>
+        <Script> switch ($args.Count) {
+				 # GetCSharpDocument([Microsoft.AspNetCore.Razor.Language.RazorCodeDocument] $document)
+		 0 { [Microsoft.AspNetCore.Razor.Language.RazorCodeDocumentExtensions]::GetCSharpDocument($this) }
+
+		 default { throw "No overload for 'GetCSharpDocument' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>SetCSharpDocument</Name>
+        <Script> switch ($args.Count) {
+				 # SetCSharpDocument([Microsoft.AspNetCore.Razor.Language.RazorCodeDocument] $document, [Microsoft.AspNetCore.Razor.Language.RazorCSharpDocument] $csharp)
+		 1 { [Microsoft.AspNetCore.Razor.Language.RazorCodeDocumentExtensions]::SetCSharpDocument($this,$args[0]) }
+
+		 default { throw "No overload for 'SetCSharpDocument' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+    </Members>
+  </Type>
+</Types>

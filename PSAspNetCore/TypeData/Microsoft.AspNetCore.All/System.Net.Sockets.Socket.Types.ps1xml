@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Types>
+  <Type>
+    <Name>System.Net.Sockets.Socket</Name>
+    <Members>
+      <ScriptMethod>
+        <Name>AcceptAsync</Name>
+        <Script> switch ($args.Count) {
+				 # AcceptAsync([System.Net.Sockets.Socket] $socket)
+		 0 { [System.Net.Sockets.SocketTaskExtensions]::AcceptAsync($this) }
+
+				 # AcceptAsync([System.Net.Sockets.Socket] $socket, [System.Net.Sockets.Socket] $acceptSocket)
+		 1 { [System.Net.Sockets.SocketTaskExtensions]::AcceptAsync($this,$args[0]) }
+
+		 default { throw "No overload for 'AcceptAsync' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>ConnectAsync</Name>
+        <Script> switch ($args.Count) {
+				 # ConnectAsync([System.Net.Sockets.Socket] $socket, [System.Net.EndPoint] $remoteEndPoint)
+		 1 { [System.Net.Sockets.SocketTaskExtensions]::ConnectAsync($this,$args[0]) }
+
+				 # ConnectAsync([System.Net.Sockets.Socket] $socket, [System.Net.IPAddress] $address, [System.Int32] $port)
+		 2 { [System.Net.Sockets.SocketTaskExtensions]::ConnectAsync($this,$args[0],$args[1]) }
+
+		 default { throw "No overload for 'ConnectAsync' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>ReceiveAsync</Name>
+        <Script> switch ($args.Count) {
+				 # ReceiveAsync([System.Net.Sockets.Socket] $socket, [System.ArraySegment`1[System.Byte]] $buffer, [System.Net.Sockets.SocketFlags] $socketFlags)
+		 2 { [System.Net.Sockets.SocketTaskExtensions]::ReceiveAsync($this,$args[0],$args[1]) }
+
+		 default { throw "No overload for 'ReceiveAsync' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>ReceiveFromAsync</Name>
+        <Script> switch ($args.Count) {
+				 # ReceiveFromAsync([System.Net.Sockets.Socket] $socket, [System.ArraySegment`1[System.Byte]] $buffer, [System.Net.Sockets.SocketFlags] $socketFlags, [System.Net.EndPoint] $remoteEndPoint)
+		 3 { [System.Net.Sockets.SocketTaskExtensions]::ReceiveFromAsync($this,$args[0],$args[1],$args[2]) }
+
+		 default { throw "No overload for 'ReceiveFromAsync' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>ReceiveMessageFromAsync</Name>
+        <Script> switch ($args.Count) {
+				 # ReceiveMessageFromAsync([System.Net.Sockets.Socket] $socket, [System.ArraySegment`1[System.Byte]] $buffer, [System.Net.Sockets.SocketFlags] $socketFlags, [System.Net.EndPoint] $remoteEndPoint)
+		 3 { [System.Net.Sockets.SocketTaskExtensions]::ReceiveMessageFromAsync($this,$args[0],$args[1],$args[2]) }
+
+		 default { throw "No overload for 'ReceiveMessageFromAsync' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>SendAsync</Name>
+        <Script> switch ($args.Count) {
+				 # SendAsync([System.Net.Sockets.Socket] $socket, [System.ArraySegment`1[System.Byte]] $buffer, [System.Net.Sockets.SocketFlags] $socketFlags)
+		 2 { [System.Net.Sockets.SocketTaskExtensions]::SendAsync($this,$args[0],$args[1]) }
+
+		 default { throw "No overload for 'SendAsync' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>SendToAsync</Name>
+        <Script> switch ($args.Count) {
+				 # SendToAsync([System.Net.Sockets.Socket] $socket, [System.ArraySegment`1[System.Byte]] $buffer, [System.Net.Sockets.SocketFlags] $socketFlags, [System.Net.EndPoint] $remoteEndPoint)
+		 3 { [System.Net.Sockets.SocketTaskExtensions]::SendToAsync($this,$args[0],$args[1],$args[2]) }
+
+		 default { throw "No overload for 'SendToAsync' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+    </Members>
+  </Type>
+</Types>

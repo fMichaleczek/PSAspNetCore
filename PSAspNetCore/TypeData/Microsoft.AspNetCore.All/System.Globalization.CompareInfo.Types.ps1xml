@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Types>
+  <Type>
+    <Name>System.Globalization.CompareInfo</Name>
+    <Members>
+      <ScriptMethod>
+        <Name>GetStringComparer</Name>
+        <Script> switch ($args.Count) {
+				 # GetStringComparer([System.Globalization.CompareInfo] $compareInfo, [System.Globalization.CompareOptions] $options)
+		 1 { [System.Globalization.GlobalizationExtensions]::GetStringComparer($this,$args[0]) }
+
+		 default { throw "No overload for 'GetStringComparer' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+    </Members>
+  </Type>
+</Types>

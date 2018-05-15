@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Types>
+  <Type>
+    <Name>Microsoft.Extensions.Logging.LoggerFilterOptions</Name>
+    <Members>
+      <ScriptMethod>
+        <Name>AddFilter</Name>
+        <Script> switch ($args.Count) {
+				 # AddFilter([Microsoft.Extensions.Logging.LoggerFilterOptions] $builder, [System.Func`4[System.String,System.String,Microsoft.Extensions.Logging.LogLevel,System.Boolean]] $filter)
+		 1 { [Microsoft.Extensions.Logging.FilterLoggingBuilderExtensions]::AddFilter($this,$args[0]) }
+
+				 # AddFilter([Microsoft.Extensions.Logging.LoggerFilterOptions] $builder, [System.String] $category, [Microsoft.Extensions.Logging.LogLevel] $level)
+		 2 { [Microsoft.Extensions.Logging.FilterLoggingBuilderExtensions]::AddFilter($this,$args[0],$args[1]) }
+
+		 default { throw "No overload for 'AddFilter' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+    </Members>
+  </Type>
+</Types>

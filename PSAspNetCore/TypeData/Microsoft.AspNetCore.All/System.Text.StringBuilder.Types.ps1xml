@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Types>
+  <Type>
+    <Name>System.Text.StringBuilder</Name>
+    <Members>
+      <ScriptMethod>
+        <Name>Append</Name>
+        <Script> switch ($args.Count) {
+				 # Append([System.Text.StringBuilder] $builder, [Microsoft.Extensions.Primitives.StringSegment] $segment)
+		 1 { [Microsoft.Extensions.Primitives.Extensions]::Append($this,$args[0]) }
+
+		 default { throw "No overload for 'Append' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+    </Members>
+  </Type>
+</Types>

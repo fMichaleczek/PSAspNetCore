@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Types>
+  <Type>
+    <Name>System.IO.Stream</Name>
+    <Members>
+      <ScriptMethod>
+        <Name>DrainAsync</Name>
+        <Script> switch ($args.Count) {
+				 # DrainAsync([System.IO.Stream] $stream, [System.Threading.CancellationToken] $cancellationToken)
+		 1 { [Microsoft.AspNetCore.WebUtilities.StreamHelperExtensions]::DrainAsync($this,$args[0]) }
+
+				 # DrainAsync([System.IO.Stream] $stream, [System.Nullable`1[System.Int64]] $limit, [System.Threading.CancellationToken] $cancellationToken)
+		 2 { [Microsoft.AspNetCore.WebUtilities.StreamHelperExtensions]::DrainAsync($this,$args[0],$args[1]) }
+
+				 # DrainAsync([System.IO.Stream] $stream, [System.Buffers.ArrayPool`1[System.Byte]] $bytePool, [System.Nullable`1[System.Int64]] $limit, [System.Threading.CancellationToken] $cancellationToken)
+		 3 { [Microsoft.AspNetCore.WebUtilities.StreamHelperExtensions]::DrainAsync($this,$args[0],$args[1],$args[2]) }
+
+		 default { throw "No overload for 'DrainAsync' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+    </Members>
+  </Type>
+</Types>

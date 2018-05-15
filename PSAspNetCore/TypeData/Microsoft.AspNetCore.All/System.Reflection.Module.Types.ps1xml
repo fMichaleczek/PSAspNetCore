@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Types>
+  <Type>
+    <Name>System.Reflection.Module</Name>
+    <Members>
+      <ScriptMethod>
+        <Name>HasModuleVersionId</Name>
+        <Script> switch ($args.Count) {
+				 # HasModuleVersionId([System.Reflection.Module] $module)
+		 0 { [System.Reflection.ModuleExtensions]::HasModuleVersionId($this) }
+
+		 default { throw "No overload for 'HasModuleVersionId' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>GetModuleVersionId</Name>
+        <Script> switch ($args.Count) {
+				 # GetModuleVersionId([System.Reflection.Module] $module)
+		 0 { [System.Reflection.ModuleExtensions]::GetModuleVersionId($this) }
+
+		 default { throw "No overload for 'GetModuleVersionId' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+    </Members>
+  </Type>
+</Types>

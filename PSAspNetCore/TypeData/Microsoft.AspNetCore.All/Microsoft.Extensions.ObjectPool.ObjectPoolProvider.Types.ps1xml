@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Types>
+  <Type>
+    <Name>Microsoft.Extensions.ObjectPool.ObjectPoolProvider</Name>
+    <Members>
+      <ScriptMethod>
+        <Name>CreateStringBuilderPool</Name>
+        <Script> switch ($args.Count) {
+				 # CreateStringBuilderPool([Microsoft.Extensions.ObjectPool.ObjectPoolProvider] $provider)
+		 0 { [Microsoft.Extensions.ObjectPool.ObjectPoolProviderExtensions]::CreateStringBuilderPool($this) }
+
+				 # CreateStringBuilderPool([Microsoft.Extensions.ObjectPool.ObjectPoolProvider] $provider, [System.Int32] $initialCapacity, [System.Int32] $maximumRetainedCapacity)
+		 2 { [Microsoft.Extensions.ObjectPool.ObjectPoolProviderExtensions]::CreateStringBuilderPool($this,$args[0],$args[1]) }
+
+		 default { throw "No overload for 'CreateStringBuilderPool' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+    </Members>
+  </Type>
+</Types>

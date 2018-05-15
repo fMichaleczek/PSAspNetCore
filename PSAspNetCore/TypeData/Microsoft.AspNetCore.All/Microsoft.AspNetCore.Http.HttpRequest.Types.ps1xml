@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Types>
+  <Type>
+    <Name>Microsoft.AspNetCore.Http.HttpRequest</Name>
+    <Members>
+      <ScriptMethod>
+        <Name>GetMultipartBoundary</Name>
+        <Script> switch ($args.Count) {
+				 # GetMultipartBoundary([Microsoft.AspNetCore.Http.HttpRequest] $request)
+		 0 { [Microsoft.AspNetCore.Http.Extensions.HttpRequestMultipartExtensions]::GetMultipartBoundary($this) }
+
+		 default { throw "No overload for 'GetMultipartBoundary' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>GetEncodedUrl</Name>
+        <Script> switch ($args.Count) {
+				 # GetEncodedUrl([Microsoft.AspNetCore.Http.HttpRequest] $request)
+		 0 { [Microsoft.AspNetCore.Http.Extensions.UriHelper]::GetEncodedUrl($this) }
+
+		 default { throw "No overload for 'GetEncodedUrl' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>GetEncodedPathAndQuery</Name>
+        <Script> switch ($args.Count) {
+				 # GetEncodedPathAndQuery([Microsoft.AspNetCore.Http.HttpRequest] $request)
+		 0 { [Microsoft.AspNetCore.Http.Extensions.UriHelper]::GetEncodedPathAndQuery($this) }
+
+		 default { throw "No overload for 'GetEncodedPathAndQuery' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>GetDisplayUrl</Name>
+        <Script> switch ($args.Count) {
+				 # GetDisplayUrl([Microsoft.AspNetCore.Http.HttpRequest] $request)
+		 0 { [Microsoft.AspNetCore.Http.Extensions.UriHelper]::GetDisplayUrl($this) }
+
+		 default { throw "No overload for 'GetDisplayUrl' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>GetTypedHeaders</Name>
+        <Script> switch ($args.Count) {
+				 # GetTypedHeaders([Microsoft.AspNetCore.Http.HttpRequest] $request)
+		 0 { [Microsoft.AspNetCore.Http.HeaderDictionaryTypeExtensions]::GetTypedHeaders($this) }
+
+		 default { throw "No overload for 'GetTypedHeaders' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>EnableRewind</Name>
+        <Script> switch ($args.Count) {
+				 # EnableRewind([Microsoft.AspNetCore.Http.HttpRequest] $request, [System.Int32] $bufferThreshold, [System.Nullable`1[System.Int64]] $bufferLimit)
+		 2 { [Microsoft.AspNetCore.Http.Internal.BufferingHelper]::EnableRewind($this,$args[0],$args[1]) }
+
+		 default { throw "No overload for 'EnableRewind' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>ReadFormAsync</Name>
+        <Script> switch ($args.Count) {
+				 # ReadFormAsync([Microsoft.AspNetCore.Http.HttpRequest] $request, [Microsoft.AspNetCore.Http.Features.FormOptions] $options, [System.Threading.CancellationToken] $cancellationToken)
+		 2 { [Microsoft.AspNetCore.Http.RequestFormReaderExtensions]::ReadFormAsync($this,$args[0],$args[1]) }
+
+		 default { throw "No overload for 'ReadFormAsync' takes the specified number of parameters." }
+ }</Script>
+      </ScriptMethod>
+    </Members>
+  </Type>
+</Types>
