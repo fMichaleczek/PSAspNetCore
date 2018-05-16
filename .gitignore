@@ -2,9 +2,9 @@
 /temp/*
 # ignore modules
 /modules/*
+!/modules/PSAspNetCore
 # ignore benchmark
 /benchmark/*
-!/modules/PSAspNetCore
 # ignore binary files and folders
 /bin/*
 /obj/*
