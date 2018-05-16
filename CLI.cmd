@@ -16,7 +16,7 @@ SET PSModulePath=%PSScriptRoot%\Modules;%PSModulePath%
 SET PSDisableModuleAnalysisCacheCleanup=1
 SET PSModuleAnalysisCachePath=%TEMP%\PSModuleAnalysisCache\%COMPUTERNAME%-%USERDOMAIN%-%USERNAME%.cache
 
-%SystemRoot%\system32\WindowsPowerShell\v1.0\powershell.exe -NoExit -WindowStyle Maximized -Command "Write-Host -Foreground White -Background DarkRed 'PSAspNetCore CLI' ; . '%PSScriptRoot%\.requirement.ps1' ; Import-Module '%PSScriptRoot%\PSAspNetCore' ; Set-Location '%PSScriptRoot%\Demos' ; tree ; Write-Host "go to directory and enter Start-PSAspNetCore"
+%SystemRoot%\system32\WindowsPowerShell\v1.0\powershell.exe -NoExit -WindowStyle Maximized -Command "Write-Host -Foreground White -Background DarkRed 'PSAspNetCore CLI' ; . '%PSScriptRoot%\.requirement.ps1' ; Import-Module '%PSScriptRoot%\PSAspNetCore' ; Set-Location '%PSScriptRoot%\Demos' ; tree ; Write-Host "go to directory and enter Start-PSAspNetCoreServer"
 
 EXIT /b %ERRORLEVEL%
 GOTO :eof
