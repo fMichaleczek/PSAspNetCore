@@ -11,6 +11,9 @@ function Import-AspNetCoreAssembly {
 		[string]
 		$IgnorePattern,
 
+		[string]
+		$WhiteListPattern,
+        
 		[System.IO.FileInfo[]]
 		$File,
 		

@@ -21,8 +21,6 @@ class Startup : IStartup {
 		
 		$Env = $App.ApplicationServices.GetRequiredService([IHostingEnvironment])
 		
-        $global:host.enternestedprompt()
-        
         $Middleware = [Func[Microsoft.AspNetCore.Http.HttpContext, Func[Task], Task]][PSDelegate]{
             ( $Context, $Next ) => {
 

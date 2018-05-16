@@ -3,16 +3,19 @@ $AssemblyDependencies = @()
 $ClassDependencies = @()
 
 #----------------------------------------------------------------------------------------------------------
-# $ErrorActionPreference = "Stop"
+$ErrorActionPreference = "Stop"
 
 $PSModuleRoot = $PSScriptRoot
+
+$Bootstrap  = Get-ChildItem ( Join-Path $PSScriptRoot Bootstrap ) -ErrorAction SilentlyContinue -Filter *.ps1 -Recurse
 # $Assemblies = Get-ChildItem ( Join-Path $PSScriptRoot Assemblies ) -ErrorAction SilentlyContinue -Filter *.dll -Recurse
 $Interfaces = Get-ChildItem ( Join-Path $PSScriptRoot Interfaces ) -ErrorAction SilentlyContinue -Filter I*.ps1 -Recurse
 $Classes    = Get-ChildItem ( Join-Path $PSScriptRoot Classes ) -ErrorAction SilentlyContinue -Filter *.ps1 -Recurse
-$Public     = Get-ChildItem ( Join-Path $PSScriptRoot ( Join-Path Functions Public ) ) -ErrorAction SilentlyContinue -Filter *.ps1 -Recurse
 $Private    = Get-ChildItem ( Join-Path $PSScriptRoot ( Join-Path Functions Private ) ) -ErrorAction SilentlyContinue -Filter *.ps1 -Recurse
+$Public     = Get-ChildItem ( Join-Path $PSScriptRoot ( Join-Path Functions Public ) ) -ErrorAction SilentlyContinue -Filter *.ps1 -Recurse
 
 #----------------------------------------------------------------------------------------------------------
+
 <#
 # dot source the assemblies dependees
 foreach ( $AssemblyDependency in @( $AssemblyDependencies ) ) {
@@ -37,31 +40,22 @@ foreach ( $Assembly in @( $Assemblies ) ) {
 }
 #>
 
-# dot source private functions
-foreach( $PriFunction in @( $Private ) ) {
-    Write-Verbose "Loading private function '$PriFunction'"
-    try{
-        . $PriFunction.FullName
-    }
-    catch{
-        Write-Error -Message "Failed to import private function $($PriFunction.FullName): $_"
-    }
-}
 
-
-# dot source public functions
-foreach ( $PubFunction in @( $Public ) ) {
-    Write-Verbose "Loading public function '$PubFunction'"
+# dot source BootFunction functions
+foreach ( $BootFunction in @( $Bootstrap ) ) {
+    Write-Verbose "Loading public function '$BootFunction'"
     try {
-        . $PubFunction.FullName
+        . $BootFunction.FullName
     }
     catch {
-        Write-Error -Message "Failed to import public function $($PubFunction.FullName): $_"
+        Write-Error -Message "Failed to import bootstrap function $($BootFunction.FullName): $_"
     }
 }
 
-Import-AspNetCoreAssembly -IgnorePattern '^Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|^System.IO.Pipelines|^Microsoft.AspNetCore.Mvc.Razor.Extensions|^Microsoft.CodeAnalysis'
-Import-AspNetCoreTypeData
+Import-AspNetCoreAssembly -WhiteListPattern '^System.Buffers' -IgnorePattern '^Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|^System|^Microsoft.AspNetCore.Mvc.Razor.Extensions|^Microsoft.CodeAnalysis'
+
+Import-AspNetCoreTypeData -IgnorePattern '^Newtonsoft.Json|^System|^Microsoft.AspNetCore.Razor'
+
 Import-AspNetCoreAccelerator -Namespace @(
 	'System.Threading', 'System.Threading.Tasks', 'System.Collections.Generic',
 	'System.Linq.Expressions',
@@ -107,8 +101,31 @@ foreach ( $Class in @( $Classes ) ) {
     }
 }
 
+# dot source private functions
+foreach( $PriFunction in @( $Private ) ) {
+    Write-Verbose "Loading private function '$PriFunction'"
+    try{
+        . $PriFunction.FullName
+    }
+    catch{
+        Write-Error -Message "Failed to import private function $($PriFunction.FullName): $_"
+    }
+}
+
+
+# dot source public functions
+foreach ( $PubFunction in @( $Public ) ) {
+    Write-Verbose "Loading public function '$PubFunction'"
+    try {
+        . $PubFunction.FullName
+    }
+    catch {
+        Write-Error -Message "Failed to import public function $($PubFunction.FullName): $_"
+    }
+}
+
 #----------------------------------------------------------------------------------------------------------
 
 # Export public functions
 Write-Verbose "Exporting public functions: $($Public.BaseName)"
-Export-ModuleMember -Function $Public.BaseName
+Export-ModuleMember -Function ( $Bootstrap.BaseName + $Public.BaseName )

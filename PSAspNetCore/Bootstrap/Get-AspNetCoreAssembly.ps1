@@ -11,9 +11,13 @@ function Get-AspNetCoreAssembly {
 		[string]
 		$IgnorePattern,
 
+		[string]
+		$WhiteListPattern,
+        
 		[System.IO.FileInfo[]]
 		$File
 	)
+    
     if ( -not $PSBoundParameters['Version'] ) {
         $VersionPath =  Get-ChildItem -Path $Path -Directory | Sort Name -Desc | Select -Index 0  | Select -Expand FullName
     }
@@ -30,7 +34,7 @@ function Get-AspNetCoreAssembly {
 	}
 
 	if ($PSBoundParameters['IgnorePattern']) {
-		$Files = $Files | Where-Object { $_.BaseName -notmatch $IgnorePattern }
+		$Files = $Files | Where-Object { $_.BaseName -notmatch $IgnorePattern -or $_.BaseName -match $WhiteListPattern }
 		Write-Verbose "Filtering $($Files.Count) dll file(s)"
 	}
     

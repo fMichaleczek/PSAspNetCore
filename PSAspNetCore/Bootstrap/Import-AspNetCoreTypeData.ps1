@@ -3,6 +3,9 @@ function Import-AspNetCoreTypeData {
 	param(
 		[string]
 		$TypeDataPath = "$PSModuleRoot\TypeData\Microsoft.AspNetCore.All",
+        
+		[string]
+		$IgnorePattern,
 
 		[switch]
 		$Force
@@ -12,7 +15,15 @@ function Import-AspNetCoreTypeData {
 		Export-AspNetCoreTypeData @PSBoundParameters
 	}
 	if ( Test-Path $TypeDataPath ) {
-		Get-ChildItem -Path $TypeDataPath -Filter '*.ps1xml' | Foreach-Object {
+    
+        $Files = Get-ChildItem -Path $TypeDataPath -Filter '*.ps1xml'
+    
+        if ($PSBoundParameters['IgnorePattern']) {
+            $Files = $Files | Where-Object { $_.BaseName -notmatch $IgnorePattern }
+            Write-Verbose "Filtering $($Files.Count) ps1xml file(s)"
+        }
+    
+		$Files | Foreach-Object {
             Write-Verbose "Import TypeData : '$($_.FullName)'"
             Update-TypeData -PrependPath $_.FullName
         }
