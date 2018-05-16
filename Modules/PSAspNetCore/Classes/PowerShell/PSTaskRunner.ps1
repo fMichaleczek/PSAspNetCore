@@ -489,7 +489,8 @@ class PSTaskRunner : System.IDisposable {
 			}
 		}
 	}
-	[PSTask] Invoke([PSTaskRunner]$PSTaskRunner, [PSTask]$PSTask) {
+    
+	static [PSTask] Invoke([PSTaskRunner]$PSTaskRunner, [PSTask]$PSTask) {
 		# Create Powershell From PSTask and RunspacePool
 		$PowerShell = [PSTaskRunner]::CreatePowerShell($PSTask, $PSTaskRunner.RunspacePool)
 
@@ -499,6 +500,14 @@ class PSTaskRunner : System.IDisposable {
 		Write-Verbose "PSTask $($PSTask.Id) Executing on TaskId $($PSTask.Task.Id)"
         
         return $PSTask
+	}
+    
+	Invoke([PSTask]$PSTask) {
+		# Create Powershell From PSTask and RunspacePool
+		$PowerShell = [PSTaskRunner]::CreatePowerShell($PSTask, $this.RunspacePool)
+
+		# Create a Task from Powershell
+		$PSTask.Task = [PSTaskRunner]::CreateTaskFromAsync($Powershell)
 	}
 	
 	static Start([PSTaskRunner]$PSTaskRunner) {
