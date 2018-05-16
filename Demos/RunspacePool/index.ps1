@@ -1,5 +1,5 @@
 Param($HttpContext)
-Start-Transcript C:\test.log
+
 Import-Module Microsoft.Powershell.Utility, Microsoft.PowerShell.Management -Global -WarningAction SilentlyContinue
 
 function Write-Response {
