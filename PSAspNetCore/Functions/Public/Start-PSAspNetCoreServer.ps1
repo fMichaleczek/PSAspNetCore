@@ -5,6 +5,8 @@ function Start-PSAspNetCoreServer {
         $ScriptFile = "$pwd\$( Split-Path $pwd -Leaf ).ps1"
     )
     
+    [IO.Directory]::SetCurrentDirectory($pwd)
+    
     if ( Test-Path $StartupFile) {
         . $StartupFile
     }
@@ -17,7 +19,7 @@ function Start-PSAspNetCoreServer {
     }
     elseif ( Test-Path $ProgramFile ) {
         . $ProgramFile
-        [Program]::Main('')
+        [Program]::Main($null)
     }
     else {
         class Program {
@@ -34,7 +36,7 @@ function Start-PSAspNetCoreServer {
             }
             
         }
-        [Program]::Main('')
+        [Program]::Main($null)
     }
 
 }
