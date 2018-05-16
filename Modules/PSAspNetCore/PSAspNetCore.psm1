@@ -127,5 +127,5 @@ foreach ( $PubFunction in @( $Public ) ) {
 #----------------------------------------------------------------------------------------------------------
 
 # Export public functions
-Write-Verbose "Exporting public functions: $($Public.BaseName)"
-Export-ModuleMember -Function ( $Bootstrap.BaseName + $Public.BaseName )
+# Write-Verbose "Exporting public functions: $($Public.BaseName)"
+# Export-ModuleMember -Function ( $Bootstrap.BaseName + $Public.BaseName )

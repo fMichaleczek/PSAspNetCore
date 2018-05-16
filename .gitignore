@@ -2,6 +2,7 @@
 /temp/*
 # ignore modules
 /modules/*
+!/modules/PSAspNetCore
 # ignore binary files and folders
 /bin/*
 /obj/*

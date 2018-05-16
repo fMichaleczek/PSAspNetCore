@@ -1,6 +1,8 @@
+Write-Host -Foreground White -Background DarkRed 'PSAspNetCore > CLI'
+
 $PSModulePath = "$PSScriptRoot\Modules"
 
-if ( -not ( Test-Path $PSModulePath ) ) {
+if ( -not ( Test-Path "$PSModulePath\ExtensionMethod" ) ) {
 
     New-Item -Path $PSModulePath -ItemType Directory > $null
 
@@ -17,3 +19,10 @@ if ( -not ( Test-Path $PSModulePath ) ) {
     Save-Module PSLambda  -Repository PSGallery -Path $PSModulePath
     Save-Module ExtensionMethod -Repository OttoMatt -Path $PSModulePath
 }
+
+Set-Location "$PSScriptRoot\Demos"
+
+(tree.com) | Where-Object { $_ -notmatch '^Folder|^Volume' }
+
+Write-Host "Go to a demo directory and enter : 'Start-PSAspNetCoreServer'"
+
